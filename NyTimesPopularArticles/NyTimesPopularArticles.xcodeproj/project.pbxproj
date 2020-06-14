@@ -17,6 +17,8 @@
 		CA8DEBD2249696FD00E501E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8DEBD0249696FD00E501E4 /* LaunchScreen.storyboard */; };
 		CA8DEBDD249696FD00E501E4 /* NyTimesPopularArticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEBDC249696FD00E501E4 /* NyTimesPopularArticlesTests.swift */; };
 		CA8DEBE8249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEBE7249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift */; };
+		CA8DEC512496A57C00E501E4 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DEC502496A57C00E501E4 /* NetworkLayer.framework */; };
+		CA8DEC522496A57C00E501E4 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DEC502496A57C00E501E4 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3687CC69472C31730DB0D7B /* Pods_NyTimesPopularArticlesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,20 @@
 			remoteInfo = NyTimesPopularArticles;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA8DEC532496A57C00E501E4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CA8DEC522496A57C00E501E4 /* NetworkLayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		016D22F288EBF2B8122CEA79 /* Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +74,7 @@
 		CA8DEBE3249696FD00E501E4 /* NyTimesPopularArticlesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NyTimesPopularArticlesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8DEBE7249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyTimesPopularArticlesUITests.swift; sourceTree = "<group>"; };
 		CA8DEBE9249696FD00E501E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA8DEC502496A57C00E501E4 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55683E6BD77EF9809E8344F /* Pods-NyTimesPopularArticlesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticlesTests.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticlesTests/Pods-NyTimesPopularArticlesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4FF4B260413C4620233D390 /* Pods-NyTimesPopularArticles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticles.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles.debug.xcconfig"; sourceTree = "<group>"; };
 		FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NyTimesPopularArticlesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C50B925241430CDC8F1B8C1F /* Pods_NyTimesPopularArticles.framework in Frameworks */,
+				CA8DEC512496A57C00E501E4 /* NetworkLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +112,7 @@
 		2D2A32504AB5BEF554D22A76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA8DEC502496A57C00E501E4 /* NetworkLayer.framework */,
 				1566AA0D827108298F40BEAF /* Pods_NyTimesPopularArticles.framework */,
 				016D22F288EBF2B8122CEA79 /* Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework */,
 				FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */,
@@ -179,6 +198,7 @@
 				CA8DEBBE249696FC00E501E4 /* Sources */,
 				CA8DEBBF249696FC00E501E4 /* Frameworks */,
 				CA8DEBC0249696FC00E501E4 /* Resources */,
+				CA8DEC532496A57C00E501E4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

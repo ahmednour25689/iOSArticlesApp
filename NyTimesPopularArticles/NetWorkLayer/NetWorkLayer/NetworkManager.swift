@@ -1,0 +1,122 @@
+//
+//  NetworkManager.swift
+//  NetworkLayer
+//
+//  Created by Ahmed Nour on 6/14/20.
+//  Copyright © 2020 Ahmed Nour. All rights reserved.
+//
+
+import Foundation
+public final class NetworkManager {
+
+    /// Each network request returns a Result which contains either a decoded json or an `NetworkManager.Error`.
+    public typealias NetworkResult = NetworkManager.Result<Any, NetworkManager.Error>
+    public typealias ResponseHandler = (NetworkResult) -> Void
+
+    // MARK: - Properties
+
+    /// Indicates whether debug mode is enabled or not.
+    public var isDebug = false
+
+    private let base : String
+    private let path : String
+    private let params : [String : String]
+    private let session: URLSession
+
+    // MARK: - Init
+
+    /// Creates an iTunes Search API client with a specific `URLSession`.
+    ///
+    /// - Parameters:
+    ///   - session: A session which is used for downloading content. The default value is `URLSession.shared`.
+    ///   - debug: Indicates if debug mode is enabled or not. In debug mode there will be an additional console output about the requested urls.
+    internal init(session: URLSession = URLSession.shared,baseUrl : String,path:String,params:[String : String], debug: Bool = false) {
+        self.params = params
+        self.base = baseUrl
+        self.path = path
+        self.session = URLSession(configuration: URLSessionConfiguration.default)
+        self.isDebug = debug
+    }
+
+    // MARK: - Search Function
+
+    /// Creates a search request for a specific `query`.
+    ///
+    /// - Parameters:
+    ///   - query: The search query.
+    ///   - type: The media type of the search. The default value is `.all`.
+    ///   - options: Additional options like language, country or limit.
+    ///   - completion: The completion handler which return the result of the API request.
+    /// - Returns: The new session data task.
+    public func getData(completion: @escaping ResponseHandler) -> URLSessionTask? {
+
+        // build parameter dictionary
+        
+
+        guard let url = url(withPath: self.path, parameters: self.params) else {
+            completion(.failure(.invalidURL))
+            return nil
+        }
+
+        // print request for debug purposes
+        if isDebug {
+            print("Request url: \(url)")
+        }
+
+        // create data task
+        let task = buildTask(withURL: url, completion: completion)
+
+        // start task
+        task.resume()
+
+        return task
+    }
+
+    
+
+    // MARK: - Helper
+
+    private func buildTask(withURL url: URL, completion: @escaping ResponseHandler) -> URLSessionDataTask {
+        return session.dataTask(with: url) { [weak self] data, response, error in
+
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(.invalidServerResponse))
+                return
+            }
+
+            // check for successful status code
+            guard 200...299 ~= httpResponse.statusCode else {
+                completion(.failure(.serverError(httpResponse.statusCode)))
+                return
+            }
+
+            // check for valid data
+            guard let data = data else {
+                completion(.failure(.missingData))
+                return
+            }
+
+            // try to decode the response json
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            
+                completion(.success(json))
+            } catch {
+                completion(.failure(.invalidJSON(error)))
+            }
+        }
+    }
+
+   
+    // MARK: - URL
+
+    private func url(withPath path: String, parameters: [String: String]) -> URL? {
+        var components = URLComponents()
+        components.scheme = "http"
+        components.host = base
+        components.path = path
+        components.queryItems = parameters.map {
+            URLQueryItem(name: $0.0, value: $0.1) }
+        return components.url
+    }
+}

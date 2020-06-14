@@ -10,6 +10,10 @@
 		CA8DEC3624969A4A00E501E4 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DEC2C24969A4A00E501E4 /* NetworkLayer.framework */; };
 		CA8DEC3B24969A4A00E501E4 /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC3A24969A4A00E501E4 /* NetworkLayerTests.swift */; };
 		CA8DEC3D24969A4A00E501E4 /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = CA8DEC2F24969A4A00E501E4 /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA8DEC4724969E5300E501E4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC4624969E5300E501E4 /* NetworkManager.swift */; };
+		CA8DEC4A24969F6100E501E4 /* NetworkManager + Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC4924969F6100E501E4 /* NetworkManager + Result.swift */; };
+		CA8DEC4C24969FDE00E501E4 /* NetworkManager + Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC4B24969FDE00E501E4 /* NetworkManager + Error.swift */; };
+		CA8DEC4F2496A4DC00E501E4 /* NetworkMangerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC4E2496A4DC00E501E4 /* NetworkMangerInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		CA8DEC3524969A4A00E501E4 /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8DEC3A24969A4A00E501E4 /* NetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTests.swift; sourceTree = "<group>"; };
 		CA8DEC3C24969A4A00E501E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA8DEC4624969E5300E501E4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CA8DEC4924969F6100E501E4 /* NetworkManager + Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager + Result.swift"; sourceTree = "<group>"; };
+		CA8DEC4B24969FDE00E501E4 /* NetworkManager + Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager + Error.swift"; sourceTree = "<group>"; };
+		CA8DEC4E2496A4DC00E501E4 /* NetworkMangerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMangerInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +79,11 @@
 		CA8DEC2E24969A4A00E501E4 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				CA8DEC4D2496A4B600E501E4 /* PublicInterface */,
+				CA8DEC4824969F3D00E501E4 /* Extensions */,
 				CA8DEC2F24969A4A00E501E4 /* NetworkLayer.h */,
 				CA8DEC3024969A4A00E501E4 /* Info.plist */,
+				CA8DEC4624969E5300E501E4 /* NetworkManager.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -84,6 +95,23 @@
 				CA8DEC3C24969A4A00E501E4 /* Info.plist */,
 			);
 			path = NetworkLayerTests;
+			sourceTree = "<group>";
+		};
+		CA8DEC4824969F3D00E501E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA8DEC4924969F6100E501E4 /* NetworkManager + Result.swift */,
+				CA8DEC4B24969FDE00E501E4 /* NetworkManager + Error.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA8DEC4D2496A4B600E501E4 /* PublicInterface */ = {
+			isa = PBXGroup;
+			children = (
+				CA8DEC4E2496A4DC00E501E4 /* NetworkMangerInterface.swift */,
+			);
+			path = PublicInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +176,7 @@
 				TargetAttributes = {
 					CA8DEC2B24969A4A00E501E4 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					CA8DEC3424969A4A00E501E4 = {
 						CreatedOnToolsVersion = 11.1;
@@ -195,6 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8DEC4F2496A4DC00E501E4 /* NetworkMangerInterface.swift in Sources */,
+				CA8DEC4724969E5300E501E4 /* NetworkManager.swift in Sources */,
+				CA8DEC4A24969F6100E501E4 /* NetworkManager + Result.swift in Sources */,
+				CA8DEC4C24969FDE00E501E4 /* NetworkManager + Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +373,7 @@
 		CA8DEC4124969A4A00E501E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = UPS.NetworkLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +398,7 @@
 		CA8DEC4224969A4A00E501E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,6 +422,7 @@
 		CA8DEC4424969A4A00E501E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkLayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +440,7 @@
 		CA8DEC4524969A4A00E501E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NetworkLayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
