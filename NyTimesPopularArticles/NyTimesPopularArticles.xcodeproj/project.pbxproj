@@ -19,6 +19,7 @@
 		CA8DEBE8249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEBE7249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift */; };
 		CA8DEC512496A57C00E501E4 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DEC502496A57C00E501E4 /* NetworkLayer.framework */; };
 		CA8DEC522496A57C00E501E4 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA8DEC502496A57C00E501E4 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA8DEC592496BC4000E501E4 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC582496BC4000E501E4 /* BaseResponse.swift */; };
 		E3687CC69472C31730DB0D7B /* Pods_NyTimesPopularArticlesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		CA8DEBE7249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyTimesPopularArticlesUITests.swift; sourceTree = "<group>"; };
 		CA8DEBE9249696FD00E501E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA8DEC502496A57C00E501E4 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA8DEC582496BC4000E501E4 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		D55683E6BD77EF9809E8344F /* Pods-NyTimesPopularArticlesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticlesTests.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticlesTests/Pods-NyTimesPopularArticlesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4FF4B260413C4620233D390 /* Pods-NyTimesPopularArticles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticles.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles.debug.xcconfig"; sourceTree = "<group>"; };
 		FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NyTimesPopularArticlesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,10 @@
 		CA8DEBC4249696FC00E501E4 /* NyTimesPopularArticles */ = {
 			isa = PBXGroup;
 			children = (
+				CA8DEC572496BB3500E501E4 /* ViewModels */,
+				CA8DEC562496BB2A00E501E4 /* Models */,
+				CA8DEC552496BB2100E501E4 /* Coordinators */,
+				CA8DEC542496BB1400E501E4 /* Views */,
 				CA8DEBC5249696FC00E501E4 /* AppDelegate.swift */,
 				CA8DEBC7249696FC00E501E4 /* SceneDelegate.swift */,
 				CA8DEBC9249696FC00E501E4 /* ViewController.swift */,
@@ -185,6 +191,35 @@
 				CA8DEBE9249696FD00E501E4 /* Info.plist */,
 			);
 			path = NyTimesPopularArticlesUITests;
+			sourceTree = "<group>";
+		};
+		CA8DEC542496BB1400E501E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA8DEC552496BB2100E501E4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CA8DEC562496BB2A00E501E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA8DEC582496BC4000E501E4 /* BaseResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA8DEC572496BB3500E501E4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +429,7 @@
 				CA8DEBCA249696FC00E501E4 /* ViewController.swift in Sources */,
 				CA8DEBC6249696FC00E501E4 /* AppDelegate.swift in Sources */,
 				CA8DEBC8249696FC00E501E4 /* SceneDelegate.swift in Sources */,
+				CA8DEC592496BC4000E501E4 /* BaseResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
