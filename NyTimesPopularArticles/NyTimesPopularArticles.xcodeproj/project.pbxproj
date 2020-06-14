@@ -111,7 +111,6 @@
 				D55683E6BD77EF9809E8344F /* Pods-NyTimesPopularArticlesTests.debug.xcconfig */,
 				6D31E5AB22D8BD8CD73A41D4 /* Pods-NyTimesPopularArticlesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
