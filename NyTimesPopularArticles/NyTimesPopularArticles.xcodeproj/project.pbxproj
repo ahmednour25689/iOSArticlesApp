@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5F5FEA8A46F1A29FDCD4A58 /* Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016D22F288EBF2B8122CEA79 /* Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework */; };
+		C50B925241430CDC8F1B8C1F /* Pods_NyTimesPopularArticles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1566AA0D827108298F40BEAF /* Pods_NyTimesPopularArticles.framework */; };
 		CA8DEBC6249696FC00E501E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEBC5249696FC00E501E4 /* AppDelegate.swift */; };
 		CA8DEBC8249696FC00E501E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEBC7249696FC00E501E4 /* SceneDelegate.swift */; };
 		CA8DEBCA249696FC00E501E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEBC9249696FC00E501E4 /* ViewController.swift */; };
@@ -15,6 +17,7 @@
 		CA8DEBD2249696FD00E501E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8DEBD0249696FD00E501E4 /* LaunchScreen.storyboard */; };
 		CA8DEBDD249696FD00E501E4 /* NyTimesPopularArticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEBDC249696FD00E501E4 /* NyTimesPopularArticlesTests.swift */; };
 		CA8DEBE8249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEBE7249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift */; };
+		E3687CC69472C31730DB0D7B /* Pods_NyTimesPopularArticlesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016D22F288EBF2B8122CEA79 /* Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1464A4C7CE6849215787BFC4 /* Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.release.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1566AA0D827108298F40BEAF /* Pods_NyTimesPopularArticles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NyTimesPopularArticles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D31E5AB22D8BD8CD73A41D4 /* Pods-NyTimesPopularArticlesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticlesTests.release.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticlesTests/Pods-NyTimesPopularArticlesTests.release.xcconfig"; sourceTree = "<group>"; };
+		ADACEB7FF21429F847D3C76C /* Pods-NyTimesPopularArticles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticles.release.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles.release.xcconfig"; sourceTree = "<group>"; };
+		C4164447F92219FC22DA00D8 /* Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA8DEBC2249696FC00E501E4 /* NyTimesPopularArticles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NyTimesPopularArticles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8DEBC5249696FC00E501E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA8DEBC7249696FC00E501E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		CA8DEBE3249696FD00E501E4 /* NyTimesPopularArticlesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NyTimesPopularArticlesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8DEBE7249696FD00E501E4 /* NyTimesPopularArticlesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyTimesPopularArticlesUITests.swift; sourceTree = "<group>"; };
 		CA8DEBE9249696FD00E501E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55683E6BD77EF9809E8344F /* Pods-NyTimesPopularArticlesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticlesTests.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticlesTests/Pods-NyTimesPopularArticlesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4FF4B260413C4620233D390 /* Pods-NyTimesPopularArticles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticles.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles.debug.xcconfig"; sourceTree = "<group>"; };
+		FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NyTimesPopularArticlesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50B925241430CDC8F1B8C1F /* Pods_NyTimesPopularArticles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3687CC69472C31730DB0D7B /* Pods_NyTimesPopularArticlesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F5FEA8A46F1A29FDCD4A58 /* Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D2A32504AB5BEF554D22A76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1566AA0D827108298F40BEAF /* Pods_NyTimesPopularArticles.framework */,
+				016D22F288EBF2B8122CEA79 /* Pods_NyTimesPopularArticles_NyTimesPopularArticlesUITests.framework */,
+				FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CB32179919A9F83BE615DD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4FF4B260413C4620233D390 /* Pods-NyTimesPopularArticles.debug.xcconfig */,
+				ADACEB7FF21429F847D3C76C /* Pods-NyTimesPopularArticles.release.xcconfig */,
+				C4164447F92219FC22DA00D8 /* Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.debug.xcconfig */,
+				1464A4C7CE6849215787BFC4 /* Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.release.xcconfig */,
+				D55683E6BD77EF9809E8344F /* Pods-NyTimesPopularArticlesTests.debug.xcconfig */,
+				6D31E5AB22D8BD8CD73A41D4 /* Pods-NyTimesPopularArticlesTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CA8DEBB9249696FC00E501E4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,8 @@
 				CA8DEBDB249696FD00E501E4 /* NyTimesPopularArticlesTests */,
 				CA8DEBE6249696FD00E501E4 /* NyTimesPopularArticlesUITests */,
 				CA8DEBC3249696FC00E501E4 /* Products */,
+				7CB32179919A9F83BE615DD6 /* Pods */,
+				2D2A32504AB5BEF554D22A76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA8DEBEC249696FD00E501E4 /* Build configuration list for PBXNativeTarget "NyTimesPopularArticles" */;
 			buildPhases = (
+				E1486FF42897A9DA8CD7FFE3 /* [CP] Check Pods Manifest.lock */,
 				CA8DEBBE249696FC00E501E4 /* Sources */,
 				CA8DEBBF249696FC00E501E4 /* Frameworks */,
 				CA8DEBC0249696FC00E501E4 /* Resources */,
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA8DEBEF249696FD00E501E4 /* Build configuration list for PBXNativeTarget "NyTimesPopularArticlesTests" */;
 			buildPhases = (
+				4EEA32CD5954C9575343846F /* [CP] Check Pods Manifest.lock */,
 				CA8DEBD4249696FD00E501E4 /* Sources */,
 				CA8DEBD5249696FD00E501E4 /* Frameworks */,
 				CA8DEBD6249696FD00E501E4 /* Resources */,
@@ -170,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA8DEBF2249696FD00E501E4 /* Build configuration list for PBXNativeTarget "NyTimesPopularArticlesUITests" */;
 			buildPhases = (
+				ECF3946B3DAB441C2B8594E9 /* [CP] Check Pods Manifest.lock */,
 				CA8DEBDF249696FD00E501E4 /* Sources */,
 				CA8DEBE0249696FD00E501E4 /* Frameworks */,
 				CA8DEBE1249696FD00E501E4 /* Resources */,
@@ -253,6 +297,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EEA32CD5954C9575343846F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NyTimesPopularArticlesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1486FF42897A9DA8CD7FFE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NyTimesPopularArticles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECF3946B3DAB441C2B8594E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA8DEBBE249696FC00E501E4 /* Sources */ = {
@@ -432,6 +545,7 @@
 		};
 		CA8DEBED249696FD00E501E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FF4B260413C4620233D390 /* Pods-NyTimesPopularArticles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +563,7 @@
 		};
 		CA8DEBEE249696FD00E501E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADACEB7FF21429F847D3C76C /* Pods-NyTimesPopularArticles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +581,7 @@
 		};
 		CA8DEBF0249696FD00E501E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D55683E6BD77EF9809E8344F /* Pods-NyTimesPopularArticlesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +603,7 @@
 		};
 		CA8DEBF1249696FD00E501E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D31E5AB22D8BD8CD73A41D4 /* Pods-NyTimesPopularArticlesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +625,7 @@
 		};
 		CA8DEBF3249696FD00E501E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4164447F92219FC22DA00D8 /* Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +645,7 @@
 		};
 		CA8DEBF4249696FD00E501E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1464A4C7CE6849215787BFC4 /* Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
