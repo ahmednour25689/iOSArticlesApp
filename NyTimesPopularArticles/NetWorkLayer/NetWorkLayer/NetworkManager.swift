@@ -7,10 +7,10 @@
 //
 
 import Foundation
-public final class NetworkManager {
+public final class NetworkManager<T:Codable> {
 
     /// Each network request returns a Result which contains either a decoded json or an `NetworkManager.Error`.
-    public typealias NetworkResult = NetworkManager.Result<Any, NetworkManager.Error>
+    public typealias NetworkResult = NetworkManager.Result<T, NetworkManager.Error>
     public typealias ResponseHandler = (NetworkResult) -> Void
 
     // MARK: - Properties
@@ -77,7 +77,7 @@ public final class NetworkManager {
     // MARK: - Helper
 
     private func buildTask(withURL url: URL, completion: @escaping ResponseHandler) -> URLSessionDataTask {
-        return session.dataTask(with: url) { [weak self] data, response, error in
+        return session.dataTask(with: url) {  data, response, error in
 
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.invalidServerResponse))
@@ -98,9 +98,10 @@ public final class NetworkManager {
 
             // try to decode the response json
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                let decoder = JSONDecoder()
+                  let dataDecoded = try decoder.decode(T.self, from: data)
             
-                completion(.success(json))
+                completion(.success(dataDecoded))
             } catch {
                 completion(.failure(.invalidJSON(error)))
             }
