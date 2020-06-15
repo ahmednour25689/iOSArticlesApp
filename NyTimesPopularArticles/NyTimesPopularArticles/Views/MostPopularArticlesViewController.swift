@@ -7,24 +7,43 @@
 //
 
 import UIKit
-
+import NetworkLayer
 class MostPopularArticlesViewController: UIViewController {
-
+    @IBOutlet var tableView: UITableView!
+    private var dataManager : DataManager<[Results]>?
+    private var dataSourceProvider : DataSourceProvider<Results>?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBar.prefersLargeTitles = true
+               navigationItem.largeTitleDisplayMode = .always
+           
         // Do any additional setup after loading the view.
+        registerNib()
+        getData()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func registerNib(){
+        tableView.register(UINib.init(nibName: "MostPopularArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "MostPopularArticleTableViewCell")
     }
-    */
+    func getData(){
+        let manger = NetworkMangerInterface<BaseResponse>.createNetworkMangerInstance(baseUrl : "api.nytimes.com",path:"/svc/mostpopular/v2/viewed/1.json",params:["api-key" : "jCMYgbYCbRPGDwkDKjb9Avhj41E1MVGn"])
+                manger.getData { result in
+                   switch result {
+                   case .success(let data):
+                    self.dataManager = DataManager(dataItems: data.results ?? [])
+                        self.dataSourceProvider = DataSourceProvider(dataManager: self.dataManager!)
+                        DispatchQueue.main.async {                            
+                            self.tableView.dataSource = self.dataSourceProvider
+                            self.tableView.delegate = self.dataSourceProvider
+                            self.tableView.reloadData()
+                        }
+                       
+                    
+                   case .failure(let error):
+                       print(error)
+                   }
+                   
+               }
+    }
+   
 
 }

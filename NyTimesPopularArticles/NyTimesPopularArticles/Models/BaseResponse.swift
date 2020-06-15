@@ -7,16 +7,19 @@
 //
 
 import Foundation
+protocol Serializable {
+    var id : Int? { get }
+}
 struct BaseResponse : Codable {
 let status : String?
 let copyright : String?
 let num_results : Int?
 let results : [Results]?
 }
-struct Results : Codable {
+struct Results : Codable,Serializable {
+var id: Int?
 let uri : String?
 let url : String?
-let id : Int?
 let asset_id : Int?
 let source : String?
 let published_date : String?
@@ -41,18 +44,14 @@ struct Media : Codable {
 let type : String?
 let mediaMetadata : [MediaMetadata]?
     enum CodingKeys: String, CodingKey {
-
         case type = "type"
-      
         case mediaMetadata = "media-metadata"
     }
-
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        type = try values.decodeIfPresent(String.self, forKey: .type)        
+        type = try values.decodeIfPresent(String.self, forKey: .type)
         mediaMetadata = try values.decodeIfPresent([MediaMetadata].self, forKey: .mediaMetadata)
     }
-
 }
 struct MediaMetadata : Codable {
 let url : String?

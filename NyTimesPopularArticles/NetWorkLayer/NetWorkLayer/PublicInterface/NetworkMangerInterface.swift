@@ -7,8 +7,8 @@
 //
 
 import Foundation
-public class NetworkMangerInterface {
-  public  static func createNetworkMangerInstance(baseUrl : String,path:String,params:[String : String])->NetworkManager{
+public class NetworkMangerInterface<T:Codable> {
+  public  static func createNetworkMangerInstance(baseUrl : String,path:String,params:[String : String])->NetworkManager<T>{
         return NetworkManager(baseUrl: baseUrl, path: path, params: params)
     }
 }
