@@ -24,6 +24,7 @@
 		CA8DEC652496C02C00E501E4 /* DataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC642496C02C00E501E4 /* DataSourceProvider.swift */; };
 		CA8DEC672496C24C00E501E4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC662496C24C00E501E4 /* DataManager.swift */; };
 		CA8DEC692496C68000E501E4 /* MostPopularArticlesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC682496C68000E501E4 /* MostPopularArticlesCoordinator.swift */; };
+		D9208BA2249965070046AB9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9208BA1249965070046AB9F /* Colors.xcassets */; };
 		E3687CC69472C31730DB0D7B /* Pods_NyTimesPopularArticlesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		CA8DEC662496C24C00E501E4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CA8DEC682496C68000E501E4 /* MostPopularArticlesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesCoordinator.swift; sourceTree = "<group>"; };
 		D55683E6BD77EF9809E8344F /* Pods-NyTimesPopularArticlesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticlesTests.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticlesTests/Pods-NyTimesPopularArticlesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9208BA1249965070046AB9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E4FF4B260413C4620233D390 /* Pods-NyTimesPopularArticles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticles.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles.debug.xcconfig"; sourceTree = "<group>"; };
 		FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NyTimesPopularArticlesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 				CA8DEC552496BB2100E501E4 /* Coordinators */,
 				CA8DEC542496BB1400E501E4 /* Views */,
 				CA8DEBC5249696FC00E501E4 /* AppDelegate.swift */,
+				D9208BA1249965070046AB9F /* Colors.xcassets */,
 				CA8DEBCE249696FD00E501E4 /* Assets.xcassets */,
 				CA8DEBD0249696FD00E501E4 /* LaunchScreen.storyboard */,
 				CA8DEBD3249696FD00E501E4 /* Info.plist */,
@@ -358,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9208BA2249965070046AB9F /* Colors.xcassets in Resources */,
 				CA8DEBD2249696FD00E501E4 /* LaunchScreen.storyboard in Resources */,
 				CA8DEC622496BF7500E501E4 /* MostPopularArticleTableViewCell.xib in Resources */,
 				CA8DEBCF249696FD00E501E4 /* Assets.xcassets in Resources */,

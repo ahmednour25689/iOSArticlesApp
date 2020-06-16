@@ -10,8 +10,8 @@ import UIKit
 import NetworkLayer
 class MostPopularArticlesViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-    private var dataManager : DataManager<[Results]>?
-    private var dataSourceProvider : DataSourceProvider<Results>?
+    private var dataManager : DataManager?
+    private var dataSourceProvider : DataSourceProvider?
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true

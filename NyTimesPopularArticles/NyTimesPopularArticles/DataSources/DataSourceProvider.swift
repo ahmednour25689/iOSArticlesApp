@@ -8,9 +8,9 @@
 
 import Foundation
 import UIKit
-public class DataSourceProvider<T>: NSObject, UITableViewDataSource, UITableViewDelegate {
-    private let dataManager: DataManager<[T]>
-    init(dataManager: DataManager<[T]>) {
+public class DataSourceProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
+    private let dataManager: DataManager
+    init(dataManager: DataManager) {
         self.dataManager = dataManager
         super.init()
     }
