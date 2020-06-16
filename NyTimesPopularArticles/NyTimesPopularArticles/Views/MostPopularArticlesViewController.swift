@@ -16,7 +16,7 @@ class MostPopularArticlesViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
                navigationItem.largeTitleDisplayMode = .always
-           
+        self.title = "NY Times Most Popular"
         // Do any additional setup after loading the view.
         registerNib()
         getData()

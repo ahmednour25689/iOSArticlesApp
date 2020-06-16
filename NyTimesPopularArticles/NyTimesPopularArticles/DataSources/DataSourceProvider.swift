@@ -23,7 +23,7 @@ public class DataSourceProvider: NSObject, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "MostPopularArticleTableViewCell", for: indexPath) as! MostPopularArticleTableViewCell
         let item = dataManager.item(at: indexPath.row) as! Results
         //cell.config(with: item)
-        cell.textLabel?.text = item.title
+        cell.config(newsData: item)
         return cell
     }
     
