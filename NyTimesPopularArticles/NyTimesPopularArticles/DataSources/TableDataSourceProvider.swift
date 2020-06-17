@@ -11,7 +11,6 @@ import UIKit
 final class TableDataSourceProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
     private let dataManager: DataManager
     private weak var apiCaller: ApiCalling?
-    
     init(dataManager: DataManager, apiCaller: ApiCalling) {
         self.dataManager = dataManager
         self.apiCaller = apiCaller
