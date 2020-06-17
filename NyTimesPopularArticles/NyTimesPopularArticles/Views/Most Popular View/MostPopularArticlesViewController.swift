@@ -15,10 +15,9 @@ class MostPopularArticlesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 150
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .automatic
         title = "NY Times Most Popular"
         // Do any additional setup after loading the view.
+        self.navigationController?.setNavigaionAttributes()
         registerNib()
         configureTableViewDataSource(items: nil)
         callApi()

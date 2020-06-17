@@ -8,6 +8,7 @@
 
 import SkeletonView
 import UIKit
+import SDWebImage
 class MostPopularArticleTableViewCell: UITableViewCell {
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var lblAuthor: UILabel!
@@ -30,10 +31,24 @@ class MostPopularArticleTableViewCell: UITableViewCell {
         lblTitle.text = newsData.title
         lblAuthor.text = newsData.byline
         lblDate.text = newsData.published_date
+        let url = newsData.media?[safe: 0]?.mediaMetadata?[safe: 0]?.url
+        guard let imageUrl = url else {
+            return
+        }
+            imgNews.sd_setImage(with: URL(string: imageUrl), completed: nil)
+            imgNews.layer.cornerRadius = imgNews.frame.height / 2
+            imgNews.clipsToBounds = true
     }
     override func prepareForReuse() {
         lblTitle.text = nil
         lblAuthor.text = nil
         lblDate.text = nil
+        imgNews.image = nil
+    }
+}
+extension Collection {
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }

@@ -18,7 +18,13 @@ public class DataSourceProvider: NSObject, UITableViewDataSource, UITableViewDel
     public func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return dataManager.itemsCount ?? 10
     }
-
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let item = dataManager.item(at: indexPath.row) as? Results {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let view = appDelegate.window?.rootViewController as? UINavigationController
+            view?.pushViewController(NewsDetailsCoordinator.setupModule(serializableObject: item), animated: true)
+        }
+    }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MostPopularArticleTableViewCell", for: indexPath) as! MostPopularArticleTableViewCell
         if let item = dataManager.item(at: indexPath.row) as? Results {

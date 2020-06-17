@@ -19,30 +19,13 @@ struct BaseResponse: Codable {
 }
 
 struct Results: Codable, Serializable {
-    var id: Int?
-    let uri: String?
-    let url: String?
-    let asset_id: Int?
-    let source: String?
+    var id: Int?    
     let published_date: String?
-    let updated: String?
-    let section: String?
-    let subsection: String?
-    let nytdsection: String?
-    let adx_adx_keywordswords: String?
-    let column: String?
     let byline: String?
-    let type: String?
     let title: String?
     let abstract: String?
-    let des_facet: [String]?
-    let org_facet: [String]?
-    let per_facet: [String]?
-    let geo_facet: [String]?
     let media: [Media]?
-    let eta_id: Int?
 }
-
 struct Media: Codable {
     let type: String?
     let mediaMetadata: [MediaMetadata]?
