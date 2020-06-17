@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class DataManager {
+final class DataManager {
     public private(set) var items: [Serializable]?
     init(dataItems: [Serializable]?) {
         items = dataItems

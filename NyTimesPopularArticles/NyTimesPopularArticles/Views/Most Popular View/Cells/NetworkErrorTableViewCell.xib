@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NetworkErrorTableViewCell" rowHeight="292" id="KGk-i7-Jjw" customClass="NetworkErrorTableViewCell" customModule="NyTimesPopularArticles" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="292"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="292"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NetworkError" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilm-7L-gWN">
+                        <rect key="frame" x="114.5" y="137" width="91.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOx-ab-xze">
+                        <rect key="frame" x="85" y="175" width="150" height="44"/>
+                        <color key="backgroundColor" name="navigaionColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="P0t-cc-nnU"/>
+                            <constraint firstAttribute="height" constant="44" id="P5M-JR-p81"/>
+                        </constraints>
+                        <state key="normal" title="Try again">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="retryGettingNewsWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rL0-ub-EbT"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ilm-7L-gWN" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="2mr-sz-RLg"/>
+                    <constraint firstItem="BOx-ab-xze" firstAttribute="centerX" secondItem="Ilm-7L-gWN" secondAttribute="centerX" id="FXy-LZ-Kjd"/>
+                    <constraint firstItem="Ilm-7L-gWN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sNQ-n6-Stw"/>
+                    <constraint firstItem="BOx-ab-xze" firstAttribute="top" secondItem="Ilm-7L-gWN" secondAttribute="bottom" constant="20" id="tzi-tx-hjK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="140.57971014492756" y="202.90178571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="navigaionColor">
+            <color red="0.27450980392156865" green="0.89411764705882357" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

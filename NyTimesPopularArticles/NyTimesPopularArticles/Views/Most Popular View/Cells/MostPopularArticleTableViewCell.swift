@@ -9,7 +9,7 @@
 import SkeletonView
 import UIKit
 import SDWebImage
-class MostPopularArticleTableViewCell: UITableViewCell {
+final class MostPopularArticleTableViewCell: BaseTableViewCell {
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var lblAuthor: UILabel!
     @IBOutlet var imgNews: UIImageView!
@@ -17,7 +17,6 @@ class MostPopularArticleTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        selectionStyle = .none
         isSkeletonable = true
         selectionStyle = .none
         [lblTitle,

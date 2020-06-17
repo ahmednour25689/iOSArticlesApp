@@ -25,6 +25,10 @@
 		CA8DEC672496C24C00E501E4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC662496C24C00E501E4 /* DataManager.swift */; };
 		CA8DEC692496C68000E501E4 /* MostPopularArticlesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC682496C68000E501E4 /* MostPopularArticlesCoordinator.swift */; };
 		D9208BA2249965070046AB9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9208BA1249965070046AB9F /* Colors.xcassets */; };
+		D95A4690249A6CB200FC982A /* NetworkErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A468E249A6CB200FC982A /* NetworkErrorTableViewCell.swift */; };
+		D95A4691249A6CB200FC982A /* NetworkErrorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95A468F249A6CB200FC982A /* NetworkErrorTableViewCell.xib */; };
+		D95A4693249A6D6500FC982A /* ErroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A4692249A6D6500FC982A /* ErroModel.swift */; };
+		D95A4696249A734400FC982A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A4695249A734400FC982A /* BaseTableViewCell.swift */; };
 		D9B753722499FD6300828DF0 /* UINavigationController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B753712499FD6300828DF0 /* UINavigationController + Extension.swift */; };
 		D9B75379249A1A7F00828DF0 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B75377249A1A7F00828DF0 /* NewsDetailsViewController.swift */; };
 		D9B7537A249A1A7F00828DF0 /* NewsDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B75378249A1A7F00828DF0 /* NewsDetailsViewController.xib */; };
@@ -92,6 +96,10 @@
 		CA8DEC682496C68000E501E4 /* MostPopularArticlesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesCoordinator.swift; sourceTree = "<group>"; };
 		D55683E6BD77EF9809E8344F /* Pods-NyTimesPopularArticlesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticlesTests.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticlesTests/Pods-NyTimesPopularArticlesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9208BA1249965070046AB9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D95A468E249A6CB200FC982A /* NetworkErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTableViewCell.swift; sourceTree = "<group>"; };
+		D95A468F249A6CB200FC982A /* NetworkErrorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkErrorTableViewCell.xib; sourceTree = "<group>"; };
+		D95A4692249A6D6500FC982A /* ErroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErroModel.swift; sourceTree = "<group>"; };
+		D95A4695249A734400FC982A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		D9B753712499FD6300828DF0 /* UINavigationController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController + Extension.swift"; sourceTree = "<group>"; };
 		D9B75377249A1A7F00828DF0 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		D9B75378249A1A7F00828DF0 /* NewsDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailsViewController.xib; sourceTree = "<group>"; };
@@ -233,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				CA8DEC582496BC4000E501E4 /* BaseResponse.swift */,
+				D95A4692249A6D6500FC982A /* ErroModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,8 +256,11 @@
 		CA8DEC5E2496BF3000E501E4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D95A4694249A732800FC982A /* BaseCell */,
 				CA8DEC5F2496BF7500E501E4 /* MostPopularArticleTableViewCell.swift */,
 				CA8DEC602496BF7500E501E4 /* MostPopularArticleTableViewCell.xib */,
+				D95A468E249A6CB200FC982A /* NetworkErrorTableViewCell.swift */,
+				D95A468F249A6CB200FC982A /* NetworkErrorTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -260,6 +272,14 @@
 				CA8DEC662496C24C00E501E4 /* DataManager.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		D95A4694249A732800FC982A /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				D95A4695249A734400FC982A /* BaseTableViewCell.swift */,
+			);
+			path = BaseCell;
 			sourceTree = "<group>";
 		};
 		D9B7536D2499FCCB00828DF0 /* Most Popular View */ = {
@@ -409,6 +429,7 @@
 			files = (
 				D9B7537A249A1A7F00828DF0 /* NewsDetailsViewController.xib in Resources */,
 				D9208BA2249965070046AB9F /* Colors.xcassets in Resources */,
+				D95A4691249A6CB200FC982A /* NetworkErrorTableViewCell.xib in Resources */,
 				CA8DEBD2249696FD00E501E4 /* LaunchScreen.storyboard in Resources */,
 				CA8DEC622496BF7500E501E4 /* MostPopularArticleTableViewCell.xib in Resources */,
 				CA8DEBCF249696FD00E501E4 /* Assets.xcassets in Resources */,
@@ -547,8 +568,11 @@
 				CA8DEC592496BC4000E501E4 /* BaseResponse.swift in Sources */,
 				CA8DEC652496C02C00E501E4 /* DataSourceProvider.swift in Sources */,
 				D9B753722499FD6300828DF0 /* UINavigationController + Extension.swift in Sources */,
+				D95A4693249A6D6500FC982A /* ErroModel.swift in Sources */,
+				D95A4690249A6CB200FC982A /* NetworkErrorTableViewCell.swift in Sources */,
 				CA8DEC692496C68000E501E4 /* MostPopularArticlesCoordinator.swift in Sources */,
 				D9B7537C249A1C7600828DF0 /* NewsDetailsCoordinator.swift in Sources */,
+				D95A4696249A734400FC982A /* BaseTableViewCell.swift in Sources */,
 				CA8DEC5C2496BEE700E501E4 /* MostPopularArticlesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

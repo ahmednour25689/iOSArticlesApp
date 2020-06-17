@@ -8,7 +8,7 @@
 
 import UIKit
 import SDWebImage
-class NewsDetailsViewController: UIViewController {
+final class NewsDetailsViewController: UIViewController {
     @IBOutlet weak var imgNews : UIImageView!
     @IBOutlet weak var lblDescription : UILabel!
    private var newsItem : Results

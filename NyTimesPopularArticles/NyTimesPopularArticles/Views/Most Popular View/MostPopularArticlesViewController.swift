@@ -8,7 +8,10 @@
 
 import NetworkLayer
 import UIKit
-class MostPopularArticlesViewController: UIViewController {
+protocol ApiCalling : class {
+  func callApi()
+}
+final class MostPopularArticlesViewController: UIViewController ,ApiCalling{
     @IBOutlet var tableView: UITableView!
     private var dataManager: DataManager?
     private var dataSourceProvider: DataSourceProvider?
@@ -19,11 +22,12 @@ class MostPopularArticlesViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationController?.setNavigaionAttributes()
         registerNib()
-        configureTableViewDataSource(items: nil)
+
         callApi()
     }
 
     func callApi() {
+      configureTableViewDataSource(items: nil)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.getData()
         }
@@ -35,11 +39,14 @@ class MostPopularArticlesViewController: UIViewController {
 
     func registerNib() {
         tableView.register(UINib(nibName: "MostPopularArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "MostPopularArticleTableViewCell")
+        tableView.register(UINib(nibName: "NetworkErrorTableViewCell", bundle: nil), forCellReuseIdentifier: "NetworkErrorTableViewCell")
+        
+        
     }
 
     func configureTableViewDataSource(items: [Serializable]?) {
         dataManager = DataManager(dataItems: items)
-        dataSourceProvider = DataSourceProvider(dataManager: dataManager!)
+      dataSourceProvider = DataSourceProvider(dataManager: dataManager!, apiCaller: self)
         DispatchQueue.main.async {
             self.tableView.dataSource = self.dataSourceProvider
             self.tableView.delegate = self.dataSourceProvider
@@ -54,7 +61,8 @@ class MostPopularArticlesViewController: UIViewController {
             case let .success(data):
                 self.configureTableViewDataSource(items: data.results)
             case let .failure(error):
-                print(error)
+                let errorModel = ErrorModel(id: 0)
+                self.configureTableViewDataSource(items: [errorModel])
             }
         }
     }
