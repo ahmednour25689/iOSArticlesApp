@@ -15,7 +15,7 @@ class NewsDetailsCoordinator {
     }
     public static func setupView(serializableObject: Serializable) -> NewsDetailsViewController {
         let detailsVc = NewsDetailsViewController(data: serializableObject)
-     
+
         return detailsVc
     }
 }

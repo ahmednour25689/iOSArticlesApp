@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 final class TableDataSourceProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
     private let dataManager: DataManager
-    private weak var apiCaller : ApiCalling?
-    init(dataManager: DataManager,apiCaller : ApiCalling) {
+    private weak var apiCaller: ApiCalling?
+    
+    init(dataManager: DataManager, apiCaller: ApiCalling) {
         self.dataManager = dataManager
         self.apiCaller = apiCaller
         super.init()
@@ -21,9 +22,9 @@ final class TableDataSourceProvider: NSObject, UITableViewDataSource, UITableVie
     }
   internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     let item = dataManager.item(at: indexPath.row)
-     let cellType = returnCellForAppropriateRow(index: indexPath.row, data: item)
+     let cellType = returnCellTypeForAppropriateRow(index: indexPath.row, data: item)
     switch cellType {
-    case .news,.loading:
+    case .news, .loading:
       return UITableView.automaticDimension
     case .error :
       return tableView.frame.height
@@ -31,42 +32,41 @@ final class TableDataSourceProvider: NSObject, UITableViewDataSource, UITableVie
   }
   internal  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let item = dataManager.item(at: indexPath.row) as? Results {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let view = appDelegate.window?.rootViewController as? UINavigationController
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            let view = appDelegate?.window?.rootViewController as? UINavigationController
             view?.pushViewController(NewsDetailsCoordinator.setupView(serializableObject: item), animated: true)
         }
     }
   internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : BaseTableViewCell?
+        var cell: BaseTableViewCell?
         let item = dataManager.item(at: indexPath.row)
-        let cellType = returnCellForAppropriateRow(index: indexPath.row, data: item)
+        let cellType = returnCellTypeForAppropriateRow(index: indexPath.row, data: item)
         switch cellType {
         case .news:
-            cell = tableView.dequeueReusableCell(withIdentifier: "MostPopularArticleTableViewCell", for: indexPath) as? BaseTableViewCell
+          cell = tableView.dequeueReusableCell(withIdentifier: Constants.mostPopularCelldentifier, for: indexPath)
+              as? BaseTableViewCell
             cell?.hideSkeleton()
-            (cell as? MostPopularArticleTableViewCell)?.config(newsData: item as! Results)
+            (cell as? MostPopularArticleTableCell)?.config(newsData: item as? Results)
         case .loading :
-            cell = tableView.dequeueReusableCell(withIdentifier: "MostPopularArticleTableViewCell", for: indexPath) as? BaseTableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: Constants.mostPopularCelldentifier, for: indexPath) as? BaseTableViewCell
             cell?.showGradientSkeleton()
         case .error :
-             cell = tableView.dequeueReusableCell(withIdentifier: "NetworkErrorTableViewCell", for: indexPath) as? BaseTableViewCell
+             cell = tableView.dequeueReusableCell(withIdentifier: Constants.networkErrorCelldentifier, for: indexPath) as? BaseTableViewCell
              (cell as? NetworkErrorTableViewCell)?.delegate = self
         }
         return cell!
     }
-   private func returnCellForAppropriateRow(index : Int,data:Serializable?)->CellType{
+   private func returnCellTypeForAppropriateRow(index: Int, data: Serializable?) -> CellType {
     if  (data as? Results) != nil {
             return .news
-        }
-    else if (data as? ErrorModel) != nil {
+        } else if (data as? ErrorModel) != nil {
             return .error
-        }
-        else {
+        } else {
             return .loading
         }
     }
 }
-extension TableDataSourceProvider : NetworkRetrying {
+extension TableDataSourceProvider: NetworkRetrying {
   func didPressRetry() {
     apiCaller?.callApi()
   }

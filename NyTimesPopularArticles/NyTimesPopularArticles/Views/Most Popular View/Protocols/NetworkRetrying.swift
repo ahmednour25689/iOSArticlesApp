@@ -1,5 +1,5 @@
 //
-//  ErroModel.swift
+//  NetworkRetrying.swift
 //  NyTimesPopularArticles
 //
 //  Created by Ahmed Nour on 6/17/20.
@@ -7,7 +7,6 @@
 //
 
 import Foundation
-struct ErrorModel: Serializable {
-    var id: Int?
-  var localizedDescription: String?
+protocol NetworkRetrying: class {
+    func didPressRetry()
 }

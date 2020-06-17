@@ -19,8 +19,8 @@
 		CA8DEC592496BC4000E501E4 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC582496BC4000E501E4 /* BaseResponse.swift */; };
 		CA8DEC5C2496BEE700E501E4 /* MostPopularArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC5A2496BEE700E501E4 /* MostPopularArticlesViewController.swift */; };
 		CA8DEC5D2496BEE700E501E4 /* MostPopularArticlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8DEC5B2496BEE700E501E4 /* MostPopularArticlesViewController.xib */; };
-		CA8DEC612496BF7500E501E4 /* MostPopularArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC5F2496BF7500E501E4 /* MostPopularArticleTableViewCell.swift */; };
-		CA8DEC622496BF7500E501E4 /* MostPopularArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8DEC602496BF7500E501E4 /* MostPopularArticleTableViewCell.xib */; };
+		CA8DEC612496BF7500E501E4 /* MostPopularArticleTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC5F2496BF7500E501E4 /* MostPopularArticleTableCell.swift */; };
+		CA8DEC622496BF7500E501E4 /* MostPopularArticleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8DEC602496BF7500E501E4 /* MostPopularArticleTableCell.xib */; };
 		CA8DEC652496C02C00E501E4 /* TableDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC642496C02C00E501E4 /* TableDataSourceProvider.swift */; };
 		CA8DEC672496C24C00E501E4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC662496C24C00E501E4 /* DataManager.swift */; };
 		CA8DEC692496C68000E501E4 /* MostPopularArticlesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC682496C68000E501E4 /* MostPopularArticlesCoordinator.swift */; };
@@ -39,6 +39,9 @@
 		D9C32CEE249A9CA500AA8256 /* CellTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CED249A9CA500AA8256 /* CellTypeEnum.swift */; };
 		D9C32CF1249A9D7F00AA8256 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CF0249A9D7F00AA8256 /* Serializable.swift */; };
 		D9C32CF4249A9E8000AA8256 /* Collection + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CF3249A9E8000AA8256 /* Collection + Extension.swift */; };
+		D9C32CF7249A9ECF00AA8256 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CF6249A9ECF00AA8256 /* ViewModelProtocol.swift */; };
+		D9C32CFA249A9F7B00AA8256 /* NetworkRetrying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CF9249A9F7B00AA8256 /* NetworkRetrying.swift */; };
+		D9C32CFC249AA00700AA8256 /* ApiCalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CFB249AA00700AA8256 /* ApiCalling.swift */; };
 		E3687CC69472C31730DB0D7B /* Pods_NyTimesPopularArticlesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,8 +98,8 @@
 		CA8DEC582496BC4000E501E4 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		CA8DEC5A2496BEE700E501E4 /* MostPopularArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesViewController.swift; sourceTree = "<group>"; };
 		CA8DEC5B2496BEE700E501E4 /* MostPopularArticlesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostPopularArticlesViewController.xib; sourceTree = "<group>"; };
-		CA8DEC5F2496BF7500E501E4 /* MostPopularArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticleTableViewCell.swift; sourceTree = "<group>"; };
-		CA8DEC602496BF7500E501E4 /* MostPopularArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostPopularArticleTableViewCell.xib; sourceTree = "<group>"; };
+		CA8DEC5F2496BF7500E501E4 /* MostPopularArticleTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticleTableCell.swift; sourceTree = "<group>"; };
+		CA8DEC602496BF7500E501E4 /* MostPopularArticleTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostPopularArticleTableCell.xib; sourceTree = "<group>"; };
 		CA8DEC642496C02C00E501E4 /* TableDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSourceProvider.swift; sourceTree = "<group>"; };
 		CA8DEC662496C24C00E501E4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CA8DEC682496C68000E501E4 /* MostPopularArticlesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesCoordinator.swift; sourceTree = "<group>"; };
@@ -116,6 +119,9 @@
 		D9C32CED249A9CA500AA8256 /* CellTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeEnum.swift; sourceTree = "<group>"; };
 		D9C32CF0249A9D7F00AA8256 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		D9C32CF3249A9E8000AA8256 /* Collection + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection + Extension.swift"; sourceTree = "<group>"; };
+		D9C32CF6249A9ECF00AA8256 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		D9C32CF9249A9F7B00AA8256 /* NetworkRetrying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRetrying.swift; sourceTree = "<group>"; };
+		D9C32CFB249AA00700AA8256 /* ApiCalling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCalling.swift; sourceTree = "<group>"; };
 		E4FF4B260413C4620233D390 /* Pods-NyTimesPopularArticles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NyTimesPopularArticles.debug.xcconfig"; path = "Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles.debug.xcconfig"; sourceTree = "<group>"; };
 		FFEEF2740833DD79A92F9674 /* Pods_NyTimesPopularArticlesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NyTimesPopularArticlesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -263,6 +269,7 @@
 		CA8DEC572496BB3500E501E4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D9C32CF5249A9EB900AA8256 /* Protocols */,
 				D95A4698249A87F100FC982A /* MostPopularArticlesViewModel.swift */,
 			);
 			path = ViewModels;
@@ -272,8 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				D95A4694249A732800FC982A /* BaseCell */,
-				CA8DEC5F2496BF7500E501E4 /* MostPopularArticleTableViewCell.swift */,
-				CA8DEC602496BF7500E501E4 /* MostPopularArticleTableViewCell.xib */,
+				CA8DEC5F2496BF7500E501E4 /* MostPopularArticleTableCell.swift */,
+				CA8DEC602496BF7500E501E4 /* MostPopularArticleTableCell.xib */,
 				D95A468E249A6CB200FC982A /* NetworkErrorTableViewCell.swift */,
 				D95A468F249A6CB200FC982A /* NetworkErrorTableViewCell.xib */,
 			);
@@ -310,6 +317,7 @@
 		D9B7536D2499FCCB00828DF0 /* Most Popular View */ = {
 			isa = PBXGroup;
 			children = (
+				D9C32CF8249A9F6C00AA8256 /* Protocols */,
 				CA8DEC5E2496BF3000E501E4 /* Cells */,
 				CA8DEC5A2496BEE700E501E4 /* MostPopularArticlesViewController.swift */,
 				CA8DEC5B2496BEE700E501E4 /* MostPopularArticlesViewController.xib */,
@@ -359,6 +367,23 @@
 			path = "Type Extension";
 			sourceTree = "<group>";
 		};
+		D9C32CF5249A9EB900AA8256 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D9C32CF6249A9ECF00AA8256 /* ViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D9C32CF8249A9F6C00AA8256 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D9C32CF9249A9F7B00AA8256 /* NetworkRetrying.swift */,
+				D9C32CFB249AA00700AA8256 /* ApiCalling.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,6 +397,7 @@
 				CA8DEBC0249696FC00E501E4 /* Resources */,
 				CA8DEC532496A57C00E501E4 /* Embed Frameworks */,
 				1A495573809050712DA931F2 /* [CP] Embed Pods Frameworks */,
+				D9C32CFD249AA06B00AA8256 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -473,7 +499,7 @@
 				D9208BA2249965070046AB9F /* Colors.xcassets in Resources */,
 				D95A4691249A6CB200FC982A /* NetworkErrorTableViewCell.xib in Resources */,
 				CA8DEBD2249696FD00E501E4 /* LaunchScreen.storyboard in Resources */,
-				CA8DEC622496BF7500E501E4 /* MostPopularArticleTableViewCell.xib in Resources */,
+				CA8DEC622496BF7500E501E4 /* MostPopularArticleTableCell.xib in Resources */,
 				CA8DEBCF249696FD00E501E4 /* Assets.xcassets in Resources */,
 				CA8DEC5D2496BEE700E501E4 /* MostPopularArticlesViewController.xib in Resources */,
 			);
@@ -552,6 +578,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D9C32CFD249AA06B00AA8256 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		E1486FF42897A9DA8CD7FFE3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -606,7 +649,8 @@
 				D9B75379249A1A7F00828DF0 /* NewsDetailsViewController.swift in Sources */,
 				CA8DEBC6249696FC00E501E4 /* AppDelegate.swift in Sources */,
 				CA8DEC672496C24C00E501E4 /* DataManager.swift in Sources */,
-				CA8DEC612496BF7500E501E4 /* MostPopularArticleTableViewCell.swift in Sources */,
+				D9C32CFC249AA00700AA8256 /* ApiCalling.swift in Sources */,
+				CA8DEC612496BF7500E501E4 /* MostPopularArticleTableCell.swift in Sources */,
 				CA8DEC592496BC4000E501E4 /* BaseResponse.swift in Sources */,
 				D95A469C249A916900FC982A /* NetworkConstants.swift in Sources */,
 				CA8DEC652496C02C00E501E4 /* TableDataSourceProvider.swift in Sources */,
@@ -619,6 +663,8 @@
 				D9C32CF1249A9D7F00AA8256 /* Serializable.swift in Sources */,
 				D9B7537C249A1C7600828DF0 /* NewsDetailsCoordinator.swift in Sources */,
 				D95A4696249A734400FC982A /* BaseTableViewCell.swift in Sources */,
+				D9C32CFA249A9F7B00AA8256 /* NetworkRetrying.swift in Sources */,
+				D9C32CF7249A9ECF00AA8256 /* ViewModelProtocol.swift in Sources */,
 				D95A4699249A87F100FC982A /* MostPopularArticlesViewModel.swift in Sources */,
 				D9C32CEE249A9CA500AA8256 /* CellTypeEnum.swift in Sources */,
 				CA8DEC5C2496BEE700E501E4 /* MostPopularArticlesViewController.swift in Sources */,

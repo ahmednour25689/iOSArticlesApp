@@ -8,15 +8,13 @@
 
 import Foundation
 
-struct BaseResponse: Codable ,Serializable{
+struct BaseResponse: Codable, Serializable {
     var id: Int?
     let status: String?
-    let copyright: String?
-    let num_results: Int?
     let results: [Results]?
 }
 struct Results: Codable, Serializable {
-    var id: Int?    
+    var id: Int?
     let published_date: String?
     let byline: String?
     let title: String?

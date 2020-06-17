@@ -7,7 +7,7 @@
 //
 
 import Foundation
- public final class NetworkManager<T:Codable> {
+ public final class NetworkManager<T: Codable> {
 
     /// Each network request returns a Result which contains either a decoded json or an `NetworkManager.Error`.
     public typealias NetworkResult = NetworkManager.Result<T, NetworkManager.Error>
@@ -18,9 +18,9 @@ import Foundation
     /// Indicates whether debug mode is enabled or not.
     public var isDebug = false
 
-    private let base : String
-    private let path : String
-    private let params : [String : String]
+    private let base: String
+    private let path: String
+    private let params: [String: String]
     private let session: URLSession
 
     // MARK: - Init
@@ -29,7 +29,7 @@ import Foundation
     /// - Parameters:
     ///   - session: A session which is used for downloading content. The default value is `URLSession.shared`.
     ///   - debug: Indicates if debug mode is enabled or not. In debug mode there will be an additional console output about the requested urls.
-    internal init(session: URLSession = URLSession.shared,baseUrl : String,path:String,params:[String : String], debug: Bool = false) {
+    internal init(session: URLSession = URLSession.shared, baseUrl: String, path: String, params: [String: String], debug: Bool = false) {
         self.params = params
         self.base = baseUrl
         self.path = path
@@ -38,7 +38,6 @@ import Foundation
     }
 
     // MARK: - getData Function
-
 
     ///
     /// - Parameters:
@@ -67,8 +66,6 @@ import Foundation
         return task
     }
 
-    
-
     // MARK: - Helper
 
     private func buildTask(withURL url: URL, completion: @escaping ResponseHandler) -> URLSessionDataTask {
@@ -95,7 +92,7 @@ import Foundation
             do {
                 let decoder = JSONDecoder()
                   let dataDecoded = try decoder.decode(T.self, from: data)
-            
+
                 completion(.success(dataDecoded))
             } catch {
                 completion(.failure(.invalidJSON(error)))
@@ -103,7 +100,6 @@ import Foundation
         }
     }
 
-   
     // MARK: - URL
 
     private func url(withPath path: String, parameters: [String: String]) -> URL? {

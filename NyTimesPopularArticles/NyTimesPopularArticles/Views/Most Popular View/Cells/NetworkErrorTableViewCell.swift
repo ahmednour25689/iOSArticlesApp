@@ -7,12 +7,10 @@
 //
 
 import UIKit
-protocol NetworkRetrying: class {
-    func didPressRetry()
-}
+
 final class NetworkErrorTableViewCell: BaseTableViewCell {
-  weak var delegate : NetworkRetrying?
-    @IBAction private func retryGettingNews(sender : UIButton) {
+  weak var delegate: NetworkRetrying?
+    @IBAction private func retryGettingNews(sender: UIButton) {
       delegate?.didPressRetry()
     }
 

@@ -8,39 +8,36 @@
 
 import NetworkLayer
 import UIKit
-protocol ApiCalling : class {
-  func callApi()
-}
 final class MostPopularArticlesViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     private var dataManager: DataManager?
     private var dataSourceProvider: TableDataSourceProvider?
-  var mostPopularArticlesViewModel: MostPopularArticlesViewModel?
+  private var viewModel: ViewModelProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
       initializeViewModel()
-
-        setUpTableView()
-        callApi()
+      setNavigationBarProperities()
+      setUpTableView()
+      callApi()
     }
-  func setNavigationBarProperities(){
-    title = mostPopularArticlesViewModel?.viewtitle
+  private func setNavigationBarProperities() {
+    title = viewModel?.viewtitle
 
            // Do any additional setup after loading the view.
          self.navigationController?.navigationBar.setNavigaionBarColor()
   }
-  func initializeViewModel(){
-    mostPopularArticlesViewModel = MostPopularArticlesViewModel(delegate: self)
+  private func initializeViewModel() {
+    viewModel = MostPopularArticlesViewModel(delegate: self)
   }
     override func viewDidLayoutSubviews() {
         view.layoutSkeletonIfNeeded()
     }
-    func setUpTableView() {
-      tableView.estimatedRowHeight = CGFloat(mostPopularArticlesViewModel?.tableRowEstimatedHeight ?? 0)
-        tableView.register(UINib(nibName: "MostPopularArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "MostPopularArticleTableViewCell")
-        tableView.register(UINib(nibName: "NetworkErrorTableViewCell", bundle: nil), forCellReuseIdentifier: "NetworkErrorTableViewCell")
+   private func setUpTableView() {
+      tableView.estimatedRowHeight = CGFloat(viewModel?.tableRowEstimatedHeight ?? 0)
+        tableView.register(UINib(nibName: Constants.mostPopularCelldentifier, bundle: nil), forCellReuseIdentifier: Constants.mostPopularCelldentifier)
+        tableView.register(UINib(nibName: Constants.networkErrorCelldentifier, bundle: nil), forCellReuseIdentifier: Constants.networkErrorCelldentifier)
     }
-    func configureTableViewDataSource(items: [Serializable]?) {
+  private  func configureTableViewDataSource(items: [Serializable]?) {
         dataManager = DataManager(dataItems: items)
       dataSourceProvider = TableDataSourceProvider(dataManager: dataManager!, apiCaller: self)
         DispatchQueue.main.async {
@@ -50,22 +47,24 @@ final class MostPopularArticlesViewController: UIViewController {
         }
     }
 }
-extension MostPopularArticlesViewController : ApiCalling {
+extension MostPopularArticlesViewController: ApiCalling {
   func callApi() {
     configureTableViewDataSource(items: nil)
       DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-        let  apiComponent = ApiUrlComponent(baseurl: NetworkConstants.apiBaseUrl, apiPath: NetworkConstants.getNewsPath, params: ["api-key": Constants.apiKey])
-        self.mostPopularArticlesViewModel?.getData(with: apiComponent)
+        let baseUrl = NetworkConstants.apiBaseUrl
+        let apiPath = NetworkConstants.getNewsPath
+        let parametes = ["api-key": Constants.apiKey]
+        let  apiComponent = ApiUrlComponent(baseurl: baseUrl, apiPath: apiPath, params: parametes)
+        self.viewModel?.getData(with: apiComponent)
       }
   }
 }
-extension  MostPopularArticlesViewController : ViewModelViewProtocol {
+extension  MostPopularArticlesViewController: ViewModelViewProtocol {
   func didGetDataWithSuccess(data: [Serializable]?) {
     self.configureTableViewDataSource(items: data)
 
   }
   func didFailedWithError(error: Serializable) {
     self.configureTableViewDataSource(items: [error])
-
   }
 }

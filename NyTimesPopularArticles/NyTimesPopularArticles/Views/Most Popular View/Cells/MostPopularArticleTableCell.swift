@@ -9,11 +9,11 @@
 import SkeletonView
 import UIKit
 import SDWebImage
-final class MostPopularArticleTableViewCell: BaseTableViewCell {
-    @IBOutlet var lblTitle: UILabel!
-    @IBOutlet var lblAuthor: UILabel!
-    @IBOutlet var imgNews: UIImageView!
-    @IBOutlet var lblDate: UILabel!
+final class MostPopularArticleTableCell: BaseTableViewCell {
+    @IBOutlet private var lblTitle: UILabel!
+    @IBOutlet private var lblAuthor: UILabel!
+    @IBOutlet private var imgNews: UIImageView!
+    @IBOutlet private var lblDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +21,7 @@ final class MostPopularArticleTableViewCell: BaseTableViewCell {
         selectionStyle = .none
       congigureSkeltonView()
     }
- private func congigureSkeltonView(){
+ private func congigureSkeltonView() {
        isSkeletonable = true
   [lblTitle,
           lblAuthor,
@@ -30,11 +30,12 @@ final class MostPopularArticleTableViewCell: BaseTableViewCell {
              $0?.showAnimatedGradientSkeleton()
          }
   }
-  internal  func config(newsData: Results) {
-        lblTitle.text = newsData.title
-        lblAuthor.text = newsData.byline
-        lblDate.text = newsData.published_date
-        let url = newsData.media?[safe: 0]?.mediaMetadata?[safe: 0]?.url
+  internal  func config(newsData: Results?) {
+
+        lblTitle.text = newsData?.title
+        lblAuthor.text = newsData?.byline
+        lblDate.text = newsData?.published_date
+        let url = newsData?.media?[safe: 0]?.mediaMetadata?[safe: 0]?.url
         guard let imageUrl = url else {
             return
         }
@@ -49,4 +50,3 @@ final class MostPopularArticleTableViewCell: BaseTableViewCell {
         imgNews.image = nil
     }
 }
-
