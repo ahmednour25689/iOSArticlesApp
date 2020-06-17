@@ -1,5 +1,5 @@
 //
-//  ErroModel.swift
+//  Constants.swift
 //  NyTimesPopularArticles
 //
 //  Created by Ahmed Nour on 6/17/20.
@@ -7,7 +7,6 @@
 //
 
 import Foundation
-struct ErrorModel : Serializable {
-    var id: Int?
-  var localizedDescription : String?
+class Constants {
+  static let apiKey = "jCMYgbYCbRPGDwkDKjb9Avhj41E1MVGn"
 }

@@ -48,6 +48,7 @@ public final class NetworkManager<T:Codable> {
     ///   - options: Additional options like language, country or limit.
     ///   - completion: The completion handler which return the result of the API request.
     /// - Returns: The new session data task.
+  @discardableResult
     public func getData(completion: @escaping ResponseHandler) -> URLSessionTask? {
 
         // build parameter dictionary

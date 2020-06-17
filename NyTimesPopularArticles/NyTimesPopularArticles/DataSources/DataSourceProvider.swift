@@ -15,7 +15,7 @@ enum CellType {
 }
 final class DataSourceProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
     private let dataManager: DataManager
-  weak var apiCaller : ApiCalling?
+    private weak var apiCaller : ApiCalling?
     init(dataManager: DataManager,apiCaller : ApiCalling) {
         self.dataManager = dataManager
         self.apiCaller = apiCaller

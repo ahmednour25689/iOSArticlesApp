@@ -13,7 +13,6 @@ class NewsDetailsCoordinator {
     init(navigationController: UINavigationController? = nil) {
         self.navigationController = navigationController
     }
-
     public static func setupModule(serializableObject: Serializable) -> NewsDetailsViewController {
         let detailsVc = NewsDetailsViewController(data: serializableObject)
      

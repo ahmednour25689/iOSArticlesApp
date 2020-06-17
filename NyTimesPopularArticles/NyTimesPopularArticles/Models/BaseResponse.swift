@@ -10,14 +10,12 @@ import Foundation
 protocol Serializable {
     var id: Int? { get }
 }
-
 struct BaseResponse: Codable {
     let status: String?
     let copyright: String?
     let num_results: Int?
     let results: [Results]?
 }
-
 struct Results: Codable, Serializable {
     var id: Int?    
     let published_date: String?
@@ -33,7 +31,6 @@ struct Media: Codable {
         case type
         case mediaMetadata = "media-metadata"
     }
-
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         type = try values.decodeIfPresent(String.self, forKey: .type)
