@@ -6,18 +6,27 @@
 //  Copyright © 2020 Ahmed Nour. All rights reserved.
 //
 
+import SkeletonView
 import UIKit
 class MostPopularArticleTableViewCell: UITableViewCell {
-    @IBOutlet weak var lblTitle : UILabel!
-    @IBOutlet weak var lblAuthor : UILabel!
-    @IBOutlet weak var imgNews : UIImageView!
-    @IBOutlet weak var lblDate : UILabel!
+    @IBOutlet var lblTitle: UILabel!
+    @IBOutlet var lblAuthor: UILabel!
+    @IBOutlet var imgNews: UIImageView!
+    @IBOutlet var lblDate: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
+        isSkeletonable = true
+        selectionStyle = .none
+        [lblTitle,
+         lblAuthor,
+         imgNews,
+         lblDate].forEach {
+            $0?.showAnimatedGradientSkeleton()
+        }
     }
-    func config(newsData : Results){
+    func config(newsData: Results) {
         lblTitle.text = newsData.title
         lblAuthor.text = newsData.byline
         lblDate.text = newsData.published_date

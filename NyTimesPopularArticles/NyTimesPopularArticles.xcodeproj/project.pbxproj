@@ -265,6 +265,7 @@
 				CA8DEBBF249696FC00E501E4 /* Frameworks */,
 				CA8DEBC0249696FC00E501E4 /* Resources */,
 				CA8DEC532496A57C00E501E4 /* Embed Frameworks */,
+				1A495573809050712DA931F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +303,7 @@
 				CA8DEBDF249696FD00E501E4 /* Sources */,
 				CA8DEBE0249696FD00E501E4 /* Frameworks */,
 				CA8DEBE1249696FD00E501E4 /* Resources */,
+				C5EF0AA8583BCFDDA5DA910B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,6 +388,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1A495573809050712DA931F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NyTimesPopularArticles/Pods-NyTimesPopularArticles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4EEA32CD5954C9575343846F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +425,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5EF0AA8583BCFDDA5DA910B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests/Pods-NyTimesPopularArticles-NyTimesPopularArticlesUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1486FF42897A9DA8CD7FFE3 /* [CP] Check Pods Manifest.lock */ = {

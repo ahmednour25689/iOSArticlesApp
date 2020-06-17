@@ -4,7 +4,9 @@
 target 'NyTimesPopularArticles' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'SkeletonView'
+  pod 'SDWebImage'
+  pod 'SwiftLint'
   # Pods for NyTimesPopularArticles
 
   target 'NyTimesPopularArticlesTests' do
