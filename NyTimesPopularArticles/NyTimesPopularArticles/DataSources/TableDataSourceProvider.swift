@@ -8,12 +8,7 @@
 
 import Foundation
 import UIKit
-enum CellType {
-    case news
-    case loading
-    case error
-}
-final class DataSourceProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
+final class TableDataSourceProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
     private let dataManager: DataManager
     private weak var apiCaller : ApiCalling?
     init(dataManager: DataManager,apiCaller : ApiCalling) {
@@ -38,7 +33,7 @@ final class DataSourceProvider: NSObject, UITableViewDataSource, UITableViewDele
         if let item = dataManager.item(at: indexPath.row) as? Results {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let view = appDelegate.window?.rootViewController as? UINavigationController
-            view?.pushViewController(NewsDetailsCoordinator.setupModule(serializableObject: item), animated: true)
+            view?.pushViewController(NewsDetailsCoordinator.setupView(serializableObject: item), animated: true)
         }
     }
   internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,24 +52,21 @@ final class DataSourceProvider: NSObject, UITableViewDataSource, UITableViewDele
              cell = tableView.dequeueReusableCell(withIdentifier: "NetworkErrorTableViewCell", for: indexPath) as? BaseTableViewCell
              (cell as? NetworkErrorTableViewCell)?.delegate = self
         }
-        
         return cell!
     }
    private func returnCellForAppropriateRow(index : Int,data:Serializable?)->CellType{
-        if  let item = data as? Results {
+    if  (data as? Results) != nil {
             return .news
         }
-        else if let item = data as? ErrorModel {
+    else if (data as? ErrorModel) != nil {
             return .error
         }
         else {
             return .loading
         }
-        
     }
 }
-
-extension DataSourceProvider : NetworkRetrying {
+extension TableDataSourceProvider : NetworkRetrying {
   func didPressRetry() {
     apiCaller?.callApi()
   }

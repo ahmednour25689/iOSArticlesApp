@@ -7,10 +7,9 @@
 //
 
 import Foundation
-protocol Serializable {
-    var id: Int? { get }
-}
-struct BaseResponse: Codable {
+
+struct BaseResponse: Codable ,Serializable{
+    var id: Int?
     let status: String?
     let copyright: String?
     let num_results: Int?

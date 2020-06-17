@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     private func showInitialView() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MostPopularArticlesCoordinator.setupModule()
+        window?.rootViewController = MostPopularArticlesCoordinator.setupView()
         window?.makeKeyAndVisible()
     }
 }

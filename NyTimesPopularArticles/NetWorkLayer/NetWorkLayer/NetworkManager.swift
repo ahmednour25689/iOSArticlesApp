@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public final class NetworkManager<T:Codable> {
+ public final class NetworkManager<T:Codable> {
 
     /// Each network request returns a Result which contains either a decoded json or an `NetworkManager.Error`.
     public typealias NetworkResult = NetworkManager.Result<T, NetworkManager.Error>
@@ -25,7 +25,6 @@ public final class NetworkManager<T:Codable> {
 
     // MARK: - Init
 
-    /// Creates an iTunes Search API client with a specific `URLSession`.
     ///
     /// - Parameters:
     ///   - session: A session which is used for downloading content. The default value is `URLSession.shared`.
@@ -38,22 +37,17 @@ public final class NetworkManager<T:Codable> {
         self.isDebug = debug
     }
 
-    // MARK: - Search Function
+    // MARK: - getData Function
 
-    /// Creates a search request for a specific `query`.
+
     ///
     /// - Parameters:
-    ///   - query: The search query.
-    ///   - type: The media type of the search. The default value is `.all`.
-    ///   - options: Additional options like language, country or limit.
     ///   - completion: The completion handler which return the result of the API request.
     /// - Returns: The new session data task.
   @discardableResult
     public func getData(completion: @escaping ResponseHandler) -> URLSessionTask? {
 
         // build parameter dictionary
-        
-
         guard let url = url(withPath: self.path, parameters: self.params) else {
             completion(.failure(.invalidURL))
             return nil

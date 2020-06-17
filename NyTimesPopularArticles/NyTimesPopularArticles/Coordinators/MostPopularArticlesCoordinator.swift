@@ -14,7 +14,7 @@ class MostPopularArticlesCoordinator {
         self.navigationController = navigationController
     }
 
-    public static func setupModule() -> UINavigationController {
+    public static func setupView() -> UINavigationController {
         let mostPopularVc = MostPopularArticlesViewController(nibName: "MostPopularArticlesViewController", bundle: nil)
         let mostPopularNVC = UINavigationController(rootViewController: mostPopularVc)
         return mostPopularNVC

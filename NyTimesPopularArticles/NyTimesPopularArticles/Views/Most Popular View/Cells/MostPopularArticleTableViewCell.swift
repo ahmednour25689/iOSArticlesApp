@@ -17,16 +17,20 @@ final class MostPopularArticleTableViewCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        isSkeletonable = true
+
         selectionStyle = .none
-        [lblTitle,
-         lblAuthor,
-         imgNews,
-         lblDate].forEach {
-            $0?.showAnimatedGradientSkeleton()
-        }
+      congigureSkeltonView()
     }
-    func config(newsData: Results) {
+ private func congigureSkeltonView(){
+       isSkeletonable = true
+  [lblTitle,
+          lblAuthor,
+          imgNews,
+          lblDate].forEach {
+             $0?.showAnimatedGradientSkeleton()
+         }
+  }
+  internal  func config(newsData: Results) {
         lblTitle.text = newsData.title
         lblAuthor.text = newsData.byline
         lblDate.text = newsData.published_date
@@ -45,9 +49,4 @@ final class MostPopularArticleTableViewCell: BaseTableViewCell {
         imgNews.image = nil
     }
 }
-extension Collection {
-    /// Returns the element at the specified index if it is within bounds, otherwise nil.
-    subscript (safe index: Index) -> Element? {
-        return indices.contains(index) ? self[index] : nil
-    }
-}
+

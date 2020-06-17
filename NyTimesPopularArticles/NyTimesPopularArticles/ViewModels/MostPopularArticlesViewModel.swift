@@ -12,13 +12,26 @@ protocol ViewModelViewProtocol : class {
   func didGetDataWithSuccess(data : [Serializable]?)
   func didFailedWithError(error : Serializable)
 }
+protocol ViewModelProtocol : class {
+  var viewtitle : String {get}
+  var tableRowEstimatedHeight : Double {get}
+  var viewModelViewDelegate : ViewModelViewProtocol? { get set }
+  func getData(with urlComponts : ApiUrlComponent)
+}
 struct ApiUrlComponent {
   let baseurl : String
   let apiPath : String
   let params : [String:String]
 }
-class MostPopularArticlesViewModel {
- private weak var viewModelViewDelegate : ViewModelViewProtocol?
+class MostPopularArticlesViewModel : ViewModelProtocol {
+  var viewtitle: String
+  {
+    return Constants.mostPopularviewTitle
+  }
+  var tableRowEstimatedHeight: Double {
+    return Constants.estimatedTableRowHeight
+  }
+  weak var viewModelViewDelegate : ViewModelViewProtocol?
   init(delegate:  ViewModelViewProtocol) {
     self.viewModelViewDelegate = delegate
   }
