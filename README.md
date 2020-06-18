@@ -3,10 +3,11 @@
 
 
 
-iOS App for showing list of articles published in nyTimes
-Developed using xcode 11.1 swift 
-used mvvm-c as design pattern 
-network layer seperated in different framework
+### iOS App for showing list of articles published in nyTimes ###
+Developed using **xcode 11.1**  <br />
+Code Linted using **swiftlint** <br />
+used **MVVM-C** as design pattern <br />
+network layer seperated in different framework <br />
 ### How do I get up and running ? ###
  1- open terminal <br />
  2- go to the place you want to clone repository ex: type cd Downloads/ <br />
@@ -22,4 +23,9 @@ network layer seperated in different framework
  
  
 ### Screens ###
-![Screenshot](AppScreens.gif)
+** App functionality where is network and no network ** <br />
+![Screenshot](AppScreens.gif)<br />
+** Test coverage ** <br />
+![Screenshot](TestCoverage.png)<br/>
+
+
