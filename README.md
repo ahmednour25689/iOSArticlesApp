@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/ahmednour25689/iOSArticlesApp.svg?token=KV9xa9Tget4T6XvfC9JW&branch=master)](https://travis-ci.com/ahmednour25689/iOSArticlesApp)
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f9deffdeecfc4b0cb04cfbb35b36390e)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ahmednour25689/iOSArticlesApp&amp;utm_campaign=Badge_Grade)
 
 
 
