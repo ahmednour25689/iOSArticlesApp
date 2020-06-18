@@ -15,16 +15,18 @@ final class MostPopularArticlesViewController: UIViewController {
   private var viewModel: ViewModelProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
+      setAccessibilityIdentifier()
       initializeViewModel()
       setNavigationBarProperities()
       setUpTableView()
       callApi()
     }
+  private func setAccessibilityIdentifier () {
+    view.accessibilityIdentifier = "MostPopularView"
+  }
   private func setNavigationBarProperities() {
     title = viewModel?.viewtitle
-
-           // Do any additional setup after loading the view.
-         self.navigationController?.navigationBar.setNavigaionBarColor()
+    self.navigationController?.navigationBar.setNavigaionBarColor()
   }
   private func initializeViewModel() {
     viewModel = MostPopularArticlesViewModel(delegate: self)

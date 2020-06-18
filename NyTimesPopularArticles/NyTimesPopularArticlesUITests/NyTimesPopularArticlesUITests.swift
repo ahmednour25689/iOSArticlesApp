@@ -7,31 +7,33 @@
 //
 
 import XCTest
-
+@testable import NyTimesPopularArticles
 class NyTimesPopularArticlesUITests: XCTestCase {
+  var app: XCUIApplication!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-
+      super.setUp()
         continueAfterFailure = false
-      //  XCUIApplication().launch()
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
+    func testMostPopularViewisFirsView() {
 
-
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+            app.launch()
+            let isDisplayingMostPopularView = app.otherElements["MostPopularView"].exists
+            XCTAssertTrue(isDisplayingMostPopularView)
+            app.terminate()
     }
+  func testViewTitleIsCorrect(){
+    app.launch()
+   let title = "NY Times Most Popular"
+    XCTAssert(app.staticTexts[title].exists)
 
+    app.terminate()
+  }
 
 }
