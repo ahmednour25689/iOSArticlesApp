@@ -23,7 +23,7 @@ network layer seperated in different framework <br />
  
  
 ### Screens ###
-** App functionality where is network and no network ** <br />
+** App functionality where there is internet connection or no internet ** <br />
 ![Screenshot](AppScreens.gif)<br />
 ** Test coverage ** <br />
 ![Screenshot](TestCoverage.png)<br/>
