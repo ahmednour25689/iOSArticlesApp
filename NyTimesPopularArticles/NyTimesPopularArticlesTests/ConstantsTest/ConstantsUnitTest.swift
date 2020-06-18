@@ -11,12 +11,7 @@ import XCTest
 class ConstantsUnitTest: XCTestCase {
   let apiKey = "jCMYgbYCbRPGDwkDKjb9Avhj41E1MVGn"
   let invalidApiKey = "jCMYgbYCbRPGDwkDKjb9Avhj41E1MVGn"
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-  override class func tearDown() {
-
-  }
+  
   func test_Constants_ApiKeyValue_IsCorrect(){
     XCTAssertTrue(Constants.apiKey == self.apiKey, "Invalid api key")
   }

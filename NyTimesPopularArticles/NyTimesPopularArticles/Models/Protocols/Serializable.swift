@@ -7,6 +7,6 @@
 //
 
 import Foundation
-protocol Serializable {
+public protocol Serializable {
     var id: Int? { get }
 }
