@@ -1,31 +1,20 @@
-![Screenshot](AppScreens.gif)
+https://travis-ci.com/ahmednour25689/iOSArticlesApp.svg?token=KV9xa9Tget4T6XvfC9JW&branch=master
 
-# README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
+iOS App for showing list of articles published in nyTimes
+Developed using xcode 11.1 swift 
+used mvvm-c as design pattern 
+network layer seperated in different framework
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+ 1- clone repository 
+ 2- checkout master branch 
+ 3-  from commandline go to download repository directory 
+ 4-  type pod deintegrate 
+ 5- then pod install 
+ 6- finally run app from xcode 
+ 7- run tests from product menu in xcode then test 
+Screens
+![Screenshot](AppScreens.gif)
