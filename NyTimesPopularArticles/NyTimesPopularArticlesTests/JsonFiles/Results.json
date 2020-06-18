@@ -1,0 +1,70 @@
+{
+  "uri": "nyt://article/ccf4a9d3-568f-5b05-84c5-ae685acd47b7",
+  "url": "https://www.nytimes.com/2020/06/15/us/gay-transgender-workers-supreme-court.html",
+  "id": 100000007069961,
+  "asset_id": 100000007069961,
+  "source": "New York Times",
+  "published_date": "2020-06-15",
+  "updated": "2020-06-16 09:40:25",
+  "section": "U.S.",
+  "subsection": "",
+  "nytdsection": "u.s.",
+  "adx_keywords": "Discrimination;Homosexuality and Bisexuality;Workplace Hazards and Violations;Transgender and Transsexuals;Civil Rights and Liberties;Decisions and Verdicts;Law and Legislation;Gorsuch, Neil M;Alito, Samuel A Jr;Stephens, Aimee;Bostock, Gerald;Zarda, Donald (1970-2014);Supreme Court (US);Equal Employment Opportunity Commission;RG & GR Harris Funeral Homes Inc",
+  "column": null,
+  "byline": "By Adam Liptak",
+  "type": "Article",
+  "title": "Civil Rights Law Protects Gay and Transgender Workers, Supreme Court Rules",
+  "abstract": "The court said the language of the Civil Rights Act of 1964, which prohibits sex discrimination, applies to discrimination based on sexual orientation and gender identity.",
+  "des_facet": [
+    "Discrimination",
+    "Homosexuality and Bisexuality",
+    "Workplace Hazards and Violations",
+    "Transgender and Transsexuals",
+    "Civil Rights and Liberties",
+    "Decisions and Verdicts",
+    "Law and Legislation"
+  ],
+  "org_facet": [
+    "Supreme Court (US)",
+    "Equal Employment Opportunity Commission",
+    "RG & GR Harris Funeral Homes Inc"
+  ],
+  "per_facet": [
+    "Gorsuch, Neil M",
+    "Alito, Samuel A Jr",
+    "Stephens, Aimee",
+    "Bostock, Gerald",
+    "Zarda, Donald (1970-2014)"
+  ],
+  "geo_facet": [],
+  "media": [
+    {
+      "type": "image",
+      "subtype": "photo",
+      "caption": "Tiffany Munroe on Sunday in Brooklyn during a rally to call attention to violence against transgender people of color.",
+      "copyright": "Demetrius Freeman for The New York Times",
+      "approved_for_syndication": 1,
+      "media-metadata": [
+        {
+          "url": "https://static01.nyt.com/images/2020/06/15/us/politics/15dc-scotus-lgbt/15dc-scotus-lgbt-thumbStandard.jpg",
+          "format": "Standard Thumbnail",
+          "height": 75,
+          "width": 75
+        },
+        {
+          "url": "https://static01.nyt.com/images/2020/06/15/us/politics/15dc-scotus-lgbt/merlin_173534901_83f3865e-6ba4-4f1b-8d6c-a7f54db8cce8-mediumThreeByTwo210.jpg",
+          "format": "mediumThreeByTwo210",
+          "height": 140,
+          "width": 210
+        },
+        {
+          "url": "https://static01.nyt.com/images/2020/06/15/us/politics/15dc-scotus-lgbt/merlin_173534901_83f3865e-6ba4-4f1b-8d6c-a7f54db8cce8-mediumThreeByTwo440.jpg",
+          "format": "mediumThreeByTwo440",
+          "height": 293,
+          "width": 440
+        }
+      ]
+    }
+  ],
+  "eta_id": 0
+}
