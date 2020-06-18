@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public final class NetworkMangerInterface<T: Codable> {
+public final class NetworkMangerInterface<T: Codable> : NetworkLayerProtocol {
   public  static func createNetworkMangerInstance(baseUrl: String, path: String, params: [String: String])->NetworkManager<T> {
         return NetworkManager(baseUrl: baseUrl, path: path, params: params)
     }

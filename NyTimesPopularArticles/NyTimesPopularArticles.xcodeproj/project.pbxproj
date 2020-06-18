@@ -35,6 +35,7 @@
 		D9B75379249A1A7F00828DF0 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B75377249A1A7F00828DF0 /* NewsDetailsViewController.swift */; };
 		D9B7537A249A1A7F00828DF0 /* NewsDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B75378249A1A7F00828DF0 /* NewsDetailsViewController.xib */; };
 		D9B7537C249A1C7600828DF0 /* NewsDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7537B249A1C7600828DF0 /* NewsDetailsCoordinator.swift */; };
+		D9BE2FE9249B694D00932989 /* ConstantsUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE2FE8249B694D00932989 /* ConstantsUnitTest.swift */; };
 		D9C32CEE249A9CA500AA8256 /* CellTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CED249A9CA500AA8256 /* CellTypeEnum.swift */; };
 		D9C32CF1249A9D7F00AA8256 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CF0249A9D7F00AA8256 /* Serializable.swift */; };
 		D9C32CF4249A9E8000AA8256 /* Collection + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C32CF3249A9E8000AA8256 /* Collection + Extension.swift */; };
@@ -114,6 +115,8 @@
 		D9B75377249A1A7F00828DF0 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		D9B75378249A1A7F00828DF0 /* NewsDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailsViewController.xib; sourceTree = "<group>"; };
 		D9B7537B249A1C7600828DF0 /* NewsDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsCoordinator.swift; sourceTree = "<group>"; };
+		D9BE2FE7249B694D00932989 /* NyTimesPopularArticlesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NyTimesPopularArticlesTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D9BE2FE8249B694D00932989 /* ConstantsUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUnitTest.swift; sourceTree = "<group>"; };
 		D9C32CED249A9CA500AA8256 /* CellTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypeEnum.swift; sourceTree = "<group>"; };
 		D9C32CF0249A9D7F00AA8256 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		D9C32CF3249A9E8000AA8256 /* Collection + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection + Extension.swift"; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 		D910B91D249B57CB007A487F /* ConstantsTest */ = {
 			isa = PBXGroup;
 			children = (
+				D9BE2FE8249B694D00932989 /* ConstantsUnitTest.swift */,
+				D9BE2FE7249B694D00932989 /* NyTimesPopularArticlesTests-Bridging-Header.h */,
 			);
 			path = ConstantsTest;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 					};
 					CA8DEBD7249696FD00E501E4 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = CA8DEBC1249696FC00E501E4;
 					};
 					CA8DEBE2249696FD00E501E4 = {
@@ -688,6 +694,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9BE2FE9249B694D00932989 /* ConstantsUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,6 +889,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NyTimesPopularArticlesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -892,6 +900,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = UPS.NyTimesPopularArticlesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NyTimesPopularArticlesTests/ConstantsTest/NyTimesPopularArticlesTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NyTimesPopularArticles.app/NyTimesPopularArticles";
@@ -904,6 +914,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NyTimesPopularArticlesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -914,6 +925,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = UPS.NyTimesPopularArticlesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NyTimesPopularArticlesTests/ConstantsTest/NyTimesPopularArticlesTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NyTimesPopularArticles.app/NyTimesPopularArticles";

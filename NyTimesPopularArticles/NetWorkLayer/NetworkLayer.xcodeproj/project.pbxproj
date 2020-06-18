@@ -14,6 +14,8 @@
 		CA8DEC4A24969F6100E501E4 /* NetworkManager + Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC4924969F6100E501E4 /* NetworkManager + Result.swift */; };
 		CA8DEC4C24969FDE00E501E4 /* NetworkManager + Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC4B24969FDE00E501E4 /* NetworkManager + Error.swift */; };
 		CA8DEC4F2496A4DC00E501E4 /* NetworkMangerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DEC4E2496A4DC00E501E4 /* NetworkMangerInterface.swift */; };
+		D9BE2FEC249B9C7100932989 /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE2FEB249B9C7100932989 /* NetworkLayerProtocol.swift */; };
+		D9BE2FEF249B9DB200932989 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE2FEE249B9DB200932989 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		CA8DEC4924969F6100E501E4 /* NetworkManager + Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager + Result.swift"; sourceTree = "<group>"; };
 		CA8DEC4B24969FDE00E501E4 /* NetworkManager + Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager + Error.swift"; sourceTree = "<group>"; };
 		CA8DEC4E2496A4DC00E501E4 /* NetworkMangerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMangerInterface.swift; sourceTree = "<group>"; };
+		D9BE2FEB249B9C7100932989 /* NetworkLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkLayerProtocol.swift; path = NetWorkLayer/PublicInterface/Protocols/NetworkLayerProtocol.swift; sourceTree = SOURCE_ROOT; };
+		D9BE2FEE249B9DB200932989 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Response.swift; path = NetWorkLayerTests/Models/Response.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		CA8DEC3924969A4A00E501E4 /* NetworkLayerTests */ = {
 			isa = PBXGroup;
 			children = (
+				D9BE2FED249B9D9B00932989 /* Models */,
 				CA8DEC3A24969A4A00E501E4 /* NetworkLayerTests.swift */,
 				CA8DEC3C24969A4A00E501E4 /* Info.plist */,
 			);
@@ -109,9 +114,26 @@
 		CA8DEC4D2496A4B600E501E4 /* PublicInterface */ = {
 			isa = PBXGroup;
 			children = (
+				D9BE2FEA249B9C4600932989 /* Protocols */,
 				CA8DEC4E2496A4DC00E501E4 /* NetworkMangerInterface.swift */,
 			);
 			path = PublicInterface;
+			sourceTree = "<group>";
+		};
+		D9BE2FEA249B9C4600932989 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D9BE2FEB249B9C7100932989 /* NetworkLayerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D9BE2FED249B9D9B00932989 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9BE2FEE249B9DB200932989 /* Response.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9BE2FEC249B9C7100932989 /* NetworkLayerProtocol.swift in Sources */,
 				CA8DEC4F2496A4DC00E501E4 /* NetworkMangerInterface.swift in Sources */,
 				CA8DEC4724969E5300E501E4 /* NetworkManager.swift in Sources */,
 				CA8DEC4A24969F6100E501E4 /* NetworkManager + Result.swift in Sources */,
@@ -236,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA8DEC3B24969A4A00E501E4 /* NetworkLayerTests.swift in Sources */,
+				D9BE2FEF249B9DB200932989 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

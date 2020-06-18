@@ -67,27 +67,22 @@ import Foundation
     }
 
     // MARK: - Helper
-
     private func buildTask(withURL url: URL, completion: @escaping ResponseHandler) -> URLSessionDataTask {
         return session.dataTask(with: url) {  data, response, error in
-
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.invalidServerResponse))
                 return
             }
-
             // check for successful status code
             guard 200...299 ~= httpResponse.statusCode else {
                 completion(.failure(.serverError(httpResponse.statusCode)))
                 return
             }
-
             // check for valid data
             guard let data = data else {
                 completion(.failure(.missingData))
                 return
             }
-
             // try to decode the response json
             do {
                 let decoder = JSONDecoder()
