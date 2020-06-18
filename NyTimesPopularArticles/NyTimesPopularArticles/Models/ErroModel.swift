@@ -9,5 +9,5 @@
 import Foundation
 struct ErrorModel: Serializable {
     var id: Int?
-  var localizedDescription: String?
+    var localizedDescription: String?
 }

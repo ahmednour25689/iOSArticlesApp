@@ -6,9 +6,9 @@
 //  Copyright © 2020 Ahmed Nour. All rights reserved.
 //
 
+import SDWebImage
 import SkeletonView
 import UIKit
-import SDWebImage
 final class MostPopularArticleTableCell: BaseTableViewCell {
     @IBOutlet private var lblTitle: UILabel!
     @IBOutlet private var lblAuthor: UILabel!
@@ -19,19 +19,20 @@ final class MostPopularArticleTableCell: BaseTableViewCell {
         // Initialization code
 
         selectionStyle = .none
-      congigureSkeltonView()
+        congigureSkeltonView()
     }
- private func congigureSkeltonView() {
-       isSkeletonable = true
-  [lblTitle,
-          lblAuthor,
-          imgNews,
-          lblDate].forEach {
-             $0?.showAnimatedGradientSkeleton()
-         }
-  }
-  internal  func config(newsData: Results?) {
 
+    private func congigureSkeltonView() {
+        isSkeletonable = true
+        [lblTitle,
+         lblAuthor,
+         imgNews,
+         lblDate].forEach {
+            $0?.showAnimatedGradientSkeleton()
+        }
+    }
+
+    internal func config(newsData: Results?) {
         lblTitle.text = newsData?.title
         lblAuthor.text = newsData?.byline
         lblDate.text = newsData?.published_date
@@ -39,10 +40,11 @@ final class MostPopularArticleTableCell: BaseTableViewCell {
         guard let imageUrl = url else {
             return
         }
-            imgNews.sd_setImage(with: URL(string: imageUrl), completed: nil)
-            imgNews.layer.cornerRadius = imgNews.frame.height / 2
-            imgNews.clipsToBounds = true
+        imgNews.sd_setImage(with: URL(string: imageUrl), completed: nil)
+        imgNews.layer.cornerRadius = imgNews.frame.height / 2
+        imgNews.clipsToBounds = true
     }
+
     override func prepareForReuse() {
         lblTitle.text = nil
         lblAuthor.text = nil

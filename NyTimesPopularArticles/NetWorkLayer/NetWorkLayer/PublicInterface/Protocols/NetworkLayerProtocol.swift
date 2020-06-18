@@ -8,8 +8,6 @@
 
 import Foundation
 protocol NetworkLayerProtocol {
-  associatedtype T : Codable
-  static func createNetworkMangerInstance(baseUrl: String, path: String, params: [String: String])->NetworkManager<T>
+    associatedtype T: Codable
+    static func createNetworkMangerInstance(baseUrl: String, path: String, params: [String: String]) -> NetworkManager<T>
 }
-
-

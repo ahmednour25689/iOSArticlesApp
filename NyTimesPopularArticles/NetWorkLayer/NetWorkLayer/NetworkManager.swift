@@ -7,8 +7,7 @@
 //
 
 import Foundation
- public final class NetworkManager<T: Codable> {
-
+public final class NetworkManager<T: Codable> {
     /// Each network request returns a Result which contains either a decoded json or an `NetworkManager.Error`.
     public typealias NetworkResult = NetworkManager.Result<T, NetworkManager.Error>
     public typealias ResponseHandler = (NetworkResult) -> Void
@@ -29,12 +28,12 @@ import Foundation
     /// - Parameters:
     ///   - session: A session which is used for downloading content. The default value is `URLSession.shared`.
     ///   - debug: Indicates if debug mode is enabled or not. In debug mode there will be an additional console output about the requested urls.
-    internal init(session: URLSession = URLSession.shared, baseUrl: String, path: String, params: [String: String], debug: Bool = false) {
+    internal init(session _: URLSession = URLSession.shared, baseUrl: String, path: String, params: [String: String], debug: Bool = false) {
         self.params = params
-        self.base = baseUrl
+        base = baseUrl
         self.path = path
-        self.session = URLSession(configuration: URLSessionConfiguration.default)
-        self.isDebug = debug
+        session = URLSession(configuration: URLSessionConfiguration.default)
+        isDebug = debug
     }
 
     // MARK: - getData Function
@@ -43,11 +42,10 @@ import Foundation
     /// - Parameters:
     ///   - completion: The completion handler which return the result of the API request.
     /// - Returns: The new session data task.
-  @discardableResult
+    @discardableResult
     public func getData(completion: @escaping ResponseHandler) -> URLSessionTask? {
-
         // build parameter dictionary
-        guard let url = url(withPath: self.path, parameters: self.params) else {
+        guard let url = url(withPath: path, parameters: params) else {
             completion(.failure(.invalidURL))
             return nil
         }
@@ -67,14 +65,15 @@ import Foundation
     }
 
     // MARK: - Helper
+
     private func buildTask(withURL url: URL, completion: @escaping ResponseHandler) -> URLSessionDataTask {
-        return session.dataTask(with: url) {  data, response, error in
+        return session.dataTask(with: url) { data, response, error in
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.invalidServerResponse))
                 return
             }
             // check for successful status code
-            guard 200...299 ~= httpResponse.statusCode else {
+            guard 200 ... 299 ~= httpResponse.statusCode else {
                 completion(.failure(.serverError(httpResponse.statusCode)))
                 return
             }
@@ -86,7 +85,7 @@ import Foundation
             // try to decode the response json
             do {
                 let decoder = JSONDecoder()
-                  let dataDecoded = try decoder.decode(T.self, from: data)
+                let dataDecoded = try decoder.decode(T.self, from: data)
 
                 completion(.success(dataDecoded))
             } catch {
@@ -103,7 +102,8 @@ import Foundation
         components.host = base
         components.path = path
         components.queryItems = parameters.map {
-            URLQueryItem(name: $0.0, value: $0.1) }
+            URLQueryItem(name: $0.0, value: $0.1)
+        }
         return components.url
     }
 }

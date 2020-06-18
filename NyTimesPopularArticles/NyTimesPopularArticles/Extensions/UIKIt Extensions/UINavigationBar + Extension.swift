@@ -7,11 +7,11 @@
 //
 import Foundation
 import UIKit
- extension UINavigationBar {
+extension UINavigationBar {
     func setNavigaionBarColor() {
-            barTintColor = UIColor(named: "navigaionColor")
-            setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-            shadowImage = UIImage()
+        barTintColor = UIColor(named: "navigaionColor")
+        setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        shadowImage = UIImage()
         isTranslucent = false
     }
 }

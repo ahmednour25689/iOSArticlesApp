@@ -8,9 +8,9 @@
 
 import Foundation
 class Constants {
-  static let apiKey = "jCMYgbYCbRPGDwkDKjb9Avhj41E1MVGn"
-  static let mostPopularviewTitle = "NY Times Most Popular"
-  static let estimatedTableRowHeight: Double = 150
-  static let mostPopularCelldentifier = "MostPopularArticleTableCell"
-  static let networkErrorCelldentifier = "NetworkErrorTableViewCell"
+    static let apiKey = "jCMYgbYCbRPGDwkDKjb9Avhj41E1MVGn"
+    static let mostPopularviewTitle = "NY Times Most Popular"
+    static let estimatedTableRowHeight: Double = 150
+    static let mostPopularCelldentifier = "MostPopularArticleTableCell"
+    static let networkErrorCelldentifier = "NetworkErrorTableViewCell"
 }

@@ -9,9 +9,8 @@
 import UIKit
 
 final class NetworkErrorTableViewCell: BaseTableViewCell {
-  weak var delegate: NetworkRetrying?
-    @IBAction private func retryGettingNews(sender: UIButton) {
-      delegate?.didPressRetry()
+    weak var delegate: NetworkRetrying?
+    @IBAction private func retryGettingNews(sender _: UIButton) {
+        delegate?.didPressRetry()
     }
-
 }

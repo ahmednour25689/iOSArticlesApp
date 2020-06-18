@@ -8,6 +8,6 @@
 
 import Foundation
 class NetworkConstants {
-  static let apiBaseUrl = "api.nytimes.com"
-  static let getNewsPath = "/svc/mostpopular/v2/viewed/1.json"
+    static let apiBaseUrl = "api.nytimes.com"
+    static let getNewsPath = "/svc/mostpopular/v2/viewed/1.json"
 }

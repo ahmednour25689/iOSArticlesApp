@@ -9,7 +9,7 @@
 import Foundation
 class ParseManager<T: Codable> {
     func parseAndLoadJson(filename fileName: String) -> T? {
-      if let url = Bundle(for: ParseManager.self).url(forResource: fileName, withExtension: "json") {
+        if let url = Bundle(for: ParseManager.self).url(forResource: fileName, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()

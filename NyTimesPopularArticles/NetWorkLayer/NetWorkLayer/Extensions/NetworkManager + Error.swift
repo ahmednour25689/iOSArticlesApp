@@ -8,7 +8,7 @@
 
 import Foundation
 public extension NetworkManager {
-     enum Error: Swift.Error {
+    enum Error: Swift.Error {
         case unknown
         case invalidURL
         case invalidServerResponse

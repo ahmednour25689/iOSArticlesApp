@@ -6,13 +6,13 @@
 //  Copyright © 2020 Ahmed Nour. All rights reserved.
 //
 
-import XCTest
 @testable import NyTimesPopularArticles
+import XCTest
 class NyTimesPopularArticlesUITests: XCTestCase {
-  var app: XCUIApplication!
+    var app: XCUIApplication!
 
     override func setUp() {
-      super.setUp()
+        super.setUp()
         continueAfterFailure = false
         app = XCUIApplication()
     }
@@ -22,18 +22,17 @@ class NyTimesPopularArticlesUITests: XCTestCase {
     }
 
     func testMostPopularViewisFirsView() {
-
-            app.launch()
-            let isDisplayingMostPopularView = app.otherElements["MostPopularView"].exists
-            XCTAssertTrue(isDisplayingMostPopularView)
-            app.terminate()
+        app.launch()
+        let isDisplayingMostPopularView = app.otherElements["MostPopularView"].exists
+        XCTAssertTrue(isDisplayingMostPopularView)
+        app.terminate()
     }
-  func testViewTitleIsCorrect(){
-    app.launch()
-   let title = "NY Times Most Popular"
-    XCTAssert(app.staticTexts[title].exists)
 
-    app.terminate()
-  }
+    func testViewTitleIsCorrect() {
+        app.launch()
+        let title = "NY Times Most Popular"
+        XCTAssert(app.staticTexts[title].exists)
 
+        app.terminate()
+    }
 }

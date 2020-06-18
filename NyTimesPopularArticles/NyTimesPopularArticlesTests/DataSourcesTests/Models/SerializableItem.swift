@@ -8,6 +8,6 @@
 
 import Foundation
 import NyTimesPopularArticles
-struct SerializableItem : Serializable {
-  var id: Int?
+struct SerializableItem: Serializable {
+    var id: Int?
 }

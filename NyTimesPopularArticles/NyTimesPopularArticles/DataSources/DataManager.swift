@@ -12,9 +12,11 @@ final class DataManager {
     init(dataItems: [Serializable]?) {
         items = dataItems
     }
+
     public var itemsCount: Int? {
         return items?.count ?? nil
     }
+
     public func item(at index: Int) -> Serializable? {
         return items?[index]
     }

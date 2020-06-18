@@ -7,6 +7,6 @@
 //
 
 import Foundation
-struct Response : Codable {
-      let status: String?
+struct Response: Codable {
+    let status: String?
 }

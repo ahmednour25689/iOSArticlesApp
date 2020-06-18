@@ -8,5 +8,5 @@
 
 import Foundation
 protocol ApiCalling: class {
-  func callApi()
+    func callApi()
 }

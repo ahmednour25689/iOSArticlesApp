@@ -9,39 +9,45 @@
 import NetworkLayer
 import UIKit
 final class MostPopularArticlesViewController: UIViewController {
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
     private var dataManager: DataManager?
     private var dataSourceProvider: TableDataSourceProvider?
-  private var viewModel: ViewModelProtocol?
+    private var viewModel: ViewModelProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
-      setAccessibilityIdentifier()
-      initializeViewModel()
-      setNavigationBarProperities()
-      setUpTableView()
-      callApi()
+        setAccessibilityIdentifier()
+        initializeViewModel()
+        setNavigationBarProperities()
+        setUpTableView()
+        callApi()
     }
-  private func setAccessibilityIdentifier () {
-    view.accessibilityIdentifier = "MostPopularView"
-  }
-  private func setNavigationBarProperities() {
-    title = viewModel?.viewtitle
-    self.navigationController?.navigationBar.setNavigaionBarColor()
-  }
-  private func initializeViewModel() {
-    viewModel = MostPopularArticlesViewModel(delegate: self)
-  }
+
+    private func setAccessibilityIdentifier() {
+        view.accessibilityIdentifier = "MostPopularView"
+    }
+
+    private func setNavigationBarProperities() {
+        title = viewModel?.viewtitle
+        navigationController?.navigationBar.setNavigaionBarColor()
+    }
+
+    private func initializeViewModel() {
+        viewModel = MostPopularArticlesViewModel(delegate: self)
+    }
+
     override func viewDidLayoutSubviews() {
         view.layoutSkeletonIfNeeded()
     }
-   private func setUpTableView() {
-      tableView.estimatedRowHeight = CGFloat(viewModel?.tableRowEstimatedHeight ?? 0)
+
+    private func setUpTableView() {
+        tableView.estimatedRowHeight = CGFloat(viewModel?.tableRowEstimatedHeight ?? 0)
         tableView.register(UINib(nibName: Constants.mostPopularCelldentifier, bundle: nil), forCellReuseIdentifier: Constants.mostPopularCelldentifier)
         tableView.register(UINib(nibName: Constants.networkErrorCelldentifier, bundle: nil), forCellReuseIdentifier: Constants.networkErrorCelldentifier)
     }
-  private  func configureTableViewDataSource(items: [Serializable]?) {
+
+    private func configureTableViewDataSource(items: [Serializable]?) {
         dataManager = DataManager(dataItems: items)
-      dataSourceProvider = TableDataSourceProvider(dataManager: dataManager!, apiCaller: self)
+        dataSourceProvider = TableDataSourceProvider(dataManager: dataManager!, apiCaller: self)
         DispatchQueue.main.async {
             self.tableView.dataSource = self.dataSourceProvider
             self.tableView.delegate = self.dataSourceProvider
@@ -49,24 +55,26 @@ final class MostPopularArticlesViewController: UIViewController {
         }
     }
 }
-extension MostPopularArticlesViewController: ApiCalling {
-  func callApi() {
-    configureTableViewDataSource(items: nil)
-      DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-        let baseUrl = NetworkConstants.apiBaseUrl
-        let apiPath = NetworkConstants.getNewsPath
-        let parametes = ["api-key": Constants.apiKey]
-        let  apiComponent = ApiUrlComponent(baseurl: baseUrl, apiPath: apiPath, params: parametes)
-        self.viewModel?.getData(with: apiComponent)
-      }
-  }
-}
-extension  MostPopularArticlesViewController: ViewModelViewProtocol {
-  func didGetDataWithSuccess(data: [Serializable]?) {
-    self.configureTableViewDataSource(items: data)
 
-  }
-  func didFailedWithError(error: Serializable) {
-    self.configureTableViewDataSource(items: [error])
-  }
+extension MostPopularArticlesViewController: ApiCalling {
+    func callApi() {
+        configureTableViewDataSource(items: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            let baseUrl = NetworkConstants.apiBaseUrl
+            let apiPath = NetworkConstants.getNewsPath
+            let parametes = ["api-key": Constants.apiKey]
+            let apiComponent = ApiUrlComponent(baseurl: baseUrl, apiPath: apiPath, params: parametes)
+            self.viewModel?.getData(with: apiComponent)
+        }
+    }
+}
+
+extension MostPopularArticlesViewController: ViewModelViewProtocol {
+    func didGetDataWithSuccess(data: [Serializable]?) {
+        configureTableViewDataSource(items: data)
+    }
+
+    func didFailedWithError(error: Serializable) {
+        configureTableViewDataSource(items: [error])
+    }
 }

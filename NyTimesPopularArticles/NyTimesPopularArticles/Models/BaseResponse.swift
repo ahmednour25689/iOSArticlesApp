@@ -13,6 +13,7 @@ struct BaseResponse: Codable, Serializable {
     let status: String?
     let results: [Results]?
 }
+
 struct Results: Codable, Serializable {
     var id: Int?
     let published_date: String?
@@ -21,6 +22,7 @@ struct Results: Codable, Serializable {
     let abstract: String?
     let media: [Media]?
 }
+
 struct Media: Codable {
     let type: String?
     let mediaMetadata: [MediaMetadata]?
@@ -28,6 +30,7 @@ struct Media: Codable {
         case type
         case mediaMetadata = "media-metadata"
     }
+
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         type = try values.decodeIfPresent(String.self, forKey: .type)

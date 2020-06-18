@@ -8,12 +8,13 @@
 
 import Foundation
 protocol ViewModelViewProtocol: class {
-  func didGetDataWithSuccess(data: [Serializable]?)
-  func didFailedWithError(error: Serializable)
+    func didGetDataWithSuccess(data: [Serializable]?)
+    func didFailedWithError(error: Serializable)
 }
+
 protocol ViewModelProtocol: class {
-  var viewtitle: String {get}
-  var tableRowEstimatedHeight: Double {get}
-  var viewModelViewDelegate: ViewModelViewProtocol? { get set }
-  func getData(with urlComponts: ApiUrlComponent)
+    var viewtitle: String { get }
+    var tableRowEstimatedHeight: Double { get }
+    var viewModelViewDelegate: ViewModelViewProtocol? { get set }
+    func getData(with urlComponts: ApiUrlComponent)
 }
