@@ -1,4 +1,4 @@
-https://travis-ci.com/ahmednour25689/iOSArticlesApp.svg?token=KV9xa9Tget4T6XvfC9JW&branch=master
+[![Build Status](https://travis-ci.com/ahmednour25689/iOSArticlesApp.svg?token=KV9xa9Tget4T6XvfC9JW&branch=master)](https://travis-ci.com/ahmednour25689/iOSArticlesApp)
 
 
 
@@ -16,5 +16,6 @@ network layer seperated in different framework
  5- then pod install 
  6- finally run app from xcode 
  7- run tests from product menu in xcode then test 
-Screens
+ 
+### Screens ###
 ![Screenshot](AppScreens.gif)
